@@ -1,0 +1,12 @@
+first step concatenate
+
+numpy will sort eigenvalues for you
+in a few lines sorts information 
+so that the lowest eignvalue/eignvec is first, opposite of notes.
+transform integrals from MO to AO basis using code given
+gao is two electron integrals
+
+reorder indices 
+
+print out MP2 correlation energy only
+

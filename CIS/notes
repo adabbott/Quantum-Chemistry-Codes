@@ -1,0 +1,5 @@
+computing excitation energies, not the total energies, teh excitatino from your ground energies
+eigenvalues, 
+eigenvectors are the c_K matrix, to get the percentage just square the value in the eigenvectors
+no need to print the possible excitations
+code up equation 0.2 and digonalize to to eigenvalues and eigenvectors(????)

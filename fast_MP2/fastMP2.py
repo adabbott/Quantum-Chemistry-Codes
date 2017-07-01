@@ -2,17 +2,15 @@ import psi4
 import numpy as np
 import configparser
 from scipy.linalg import block_diag
-import scipy.linalg as la
 import time
-import itertools
-from sympy.combinatorics.permutations import Permutation
 
+psi4.core.be_quiet()
 config = configparser.ConfigParser()
 config.read('Options.ini') #pointing to our options.ini file for info on molecule
+#reads in geometry given by input
 molecule = psi4.geometry(config['DEFAULT']['molecule'])
 
 SCF_MAX_ITER = int(config['SCF']['max_iter'])
-CC_MAX_ITER = int(config['CC']['max_iter'])
 #get basis set
 basis = psi4.core.BasisSet.build(molecule, "BASIS", config['DEFAULT']['basis'],puream=0)
 #set up integrals
@@ -25,29 +23,35 @@ nocc = nalpha + nbeta
 ntotal = 2*mints.basisset().nbf()
 nvirt = ntotal-nocc
 
+
 # Overlap integrals 
 S = mints.ao_overlap().to_array()
-#Kinetic energy portion
+#Kinetic energy portion, i.e. the kintetic enregy of attraction to the nuclei
 T = mints.ao_kinetic().to_array()
-# Potential energy portion
+# Potential energy portion, i.e. the potential energy of the electron attraction to the nuclei
 V = mints.ao_potential().to_array()
 #Two-electron repulsion
 I = mints.ao_eri().to_array()
 #form the one-electron hamiltonian
 H = T + V
-
 #construct the orthogonalizer S^-1/2, 
 A = mints.ao_overlap()
 A.power(-0.5, 1.e-16)  #diagonalize S matrix and take to negative one half power 
 A = A.to_array()
 
-
 #CONTRUCT INTIAL DENSITY MATRIX
+#Commentary:
+#The Roothan-Hall Equation: FC = SCe, is not an ordinary eigenvalue equation,
+#but by multiplying both sides by S^(-1/2) we can reduce it to F'C'=C'e where F'=S^(-1/2)(F)S^(-1/2) and C' = S^(1/2)C
+#this is effectively transforming to an orthogonalized atomic orbital basis. We can diagonalize F' easily, andd then transfrom the coefficients
+#back into the MO representation.
 #form transformed fock matrix 
 Ft = A.dot(H).dot(A)
 #extract eigenvales and eigenvectors, we wont use eigvals but it's included anyway
 e, C = np.linalg.eigh(Ft)
 C = A.dot(C)
+#here column vectors of C are the expansion coefficients of the AO's for a molecular orbital.
+#Since we are doing UHF we parse these into an alpha and beta part
 Ca = C[:, :nalpha]
 Cb = C[:, :nbeta]
 Da = np.einsum('pi,qi->pq', Ca, Ca)
@@ -72,8 +76,8 @@ for iteration in range(1, SCF_MAX_ITER+1):
     Ka = np.einsum('prqs,rs->pq', I, Da) #total exchange of alpha e-
     Kb = np.einsum('prqs,rs->pq', I, Db) #total exchange of beta e-
     #form the fock matrix
-    Fa = H + Ja - Ka + Jb
-    Fb = H + Jb - Kb + Ja
+    Fa = H + Ja + Jb - Ka
+    Fb = H + Ja + Jb - Kb
     #conditions to turn on DIIS 
     if int(config['SCF']['diis']) == 1 and int(config['SCF']['diis_start']) <= iteration:  
     #do DIIS
@@ -118,7 +122,7 @@ for iteration in range(1, SCF_MAX_ITER+1):
             Fb = sum(q[i]*b_focks[i] for i in range(n))
     # Calculate SCF energy
     E_SCF = (1/2)*(np.einsum('pq,pq->', Fa+H, Da) + np.einsum('pq,pq->', Fb+H, Db))  + molecule.nuclear_repulsion_energy()
-    #print('UHF iteration %3d: energy %20.14f  dE %1.5E' % (iteration, E_SCF, (E_SCF - Eold)))
+    print('UHF iteration %3d: energy %20.14f  dE %1.5E' % (iteration, E_SCF, (E_SCF - Eold)))
     
     if (abs(E_SCF - Eold) < 1.e-10):
         break
@@ -131,7 +135,7 @@ for iteration in range(1, SCF_MAX_ITER+1):
     Fta = A.dot(Fa).dot(A)
     Ftb = A.dot(Fb).dot(A)
     
-    # Diagonalize the Fock matrix 
+    # Diagonalize the Fock matrix to get new coefficients
     ea, C_a = np.linalg.eigh(Fta)
     eb, C_b = np.linalg.eigh(Ftb)
     
@@ -144,94 +148,43 @@ for iteration in range(1, SCF_MAX_ITER+1):
     Da = np.einsum('pi,qi->pq', Ca, Ca)
     Db = np.einsum('pi,qi->pq', Cb, Cb)
 
-
-#gather block diagonalized coefficent matrix to transform 2 e- integrals to MO basis later
+#do MP2
+#block diagonalize the coefficent matrix to transform 2 e- integrals
 C_block  = block_diag(C_a, C_b)
 orb_energies = np.concatenate((ea,eb))
+#arrange the columns in C according to the order of orbital energies
 C_block = C_block[:,orb_energies.argsort()]
 orb_energies = np.sort(orb_energies, None)
-
+#now C is sorted and spin blocked
+#function to block the two electron integrals in a similar way
 def spin_block_tei(gao):
-    Identity = np.eye(2) #2x2 identity matrix
-    gao = np.kron(Identity, gao) #basically tensor product of 2x2 Identity with gao
-    return np.kron(Identity, gao.T) #transpose to make rows into columns
-
+    Identity = np.eye(2) 
+    gao = np.kron(Identity, gao) 
+    return np.kron(Identity, gao.T) 
+#What this is doing here is taking our 4 dimensional array of 2 electron integrals
+#and putting them into the space of the 2x2 identity. Each np.kron doubles the size of two dimensions.
+#Then, it tranposes and does it . The progression is I = (n,n,n,n) to (n,n,2n,2n) to (2n,2n,2n,2n)
 I = spin_block_tei(I)
-
+#I is now "spin blocked" as well
+#antisymmetrize and convert to physicists notation
+#given (ab|cd), convert to <ac|bd> - <ac|db>
 I_phys = I.transpose(0,2,1,3) - I.transpose(0,2,3,1)
 
-O = slice(None, nocc)
-V = slice(nocc, None)
-#for CCD terms
-G_vvoo = np.einsum('pQRS, pP -> PQRS', 
-         np.einsum('pqRS, qQ -> pQRS', 
-         np.einsum('pqrS, rR -> pqRS', 
-         np.einsum('pqrs, sS -> pqrS', I_phys, C_block[:,O]), C_block[:,O]), C_block[:,V]), C_block[:,V]) 
-
-G_vvvv = np.einsum('pQRS, pP -> PQRS', 
-         np.einsum('pqRS, qQ -> pQRS', 
-         np.einsum('pqrS, rR -> pqRS', 
-         np.einsum('pqrs, sS -> pqrS', I_phys, C_block[:,V]), C_block[:,V]), C_block[:,V]), C_block[:,V]) 
-
-G_oooo = np.einsum('pQRS, pP -> PQRS', 
-         np.einsum('pqRS, qQ -> pQRS', 
-         np.einsum('pqrS, rR -> pqRS', 
-         np.einsum('pqrs, sS -> pqrS', I_phys, C_block[:,O]), C_block[:,O]), C_block[:,O]), C_block[:,O]) 
-
-G_ovvo = np.einsum('pQRS, pP -> PQRS', 
-         np.einsum('pqRS, qQ -> pQRS', 
-         np.einsum('pqrS, rR -> pqRS', 
-         np.einsum('pqrs, sS -> pqrS', I_phys, C_block[:,O]), C_block[:,V]), C_block[:,V]), C_block[:,O]) 
-
-G_oovv = np.einsum('pQRS, pP -> PQRS', 
-         np.einsum('pqRS, qQ -> pQRS', 
-         np.einsum('pqrS, rR -> pqRS', 
-         np.einsum('pqrs, sS -> pqrS', I_phys, C_block[:,V]), C_block[:,V]), C_block[:,O]), C_block[:,O])
-
-#perform CCD
-N = np.newaxis #dummy axis
-e_abij =  (-orb_energies[V, N, N, N] - orb_energies[N, V, N, N] + orb_energies[N,N,O,N] + orb_energies[N,N,N,O])
-t_amp = np.zeros((nvirt, nvirt, nocc, nocc))
-Energy = 0.0
-
-#function to handle permutation operators on coupled cluster amplitudes
-def permute(tamp, permutations): 
-    dim = np.shape(tamp)
-    ndim = len(dim)
-    #copy original tamp
-    full_tamp = np.copy(tamp)
-# create every possible subset of permutations, add brackets around, so in the form of [[A1,..,An]]
-    for i in range(1, len(permutations) + 1): #for subset of size 1, up to the full set
-        for j in list(itertools.combinations(permutations, i)): #create all combinations of permutations
-            PERMUTATION = Permutation(list(j))
-            PERMUTATION_LIST = PERMUTATION.list(ndim)
-            #now sum all relevant transposes, adding in sign change
-            full_tamp +=  (-1)**(PERMUTATION.inversions()) * tamp.transpose(tuple(PERMUTATION_LIST))
-    return full_tamp 
 
 t0 = time.time()
-#all indices read "bra, bra, ket, ket", or "lower, lower, upper, upper", einstein summation convention
-for iteration in range(1, CC_MAX_ITER+1):
-    #eight diagrams in t_amp expansion
-    mp2_term = G_vvoo
-    ccd1    =  (1/2) * np.einsum('abcd, cdij -> abij', G_vvvv, t_amp)
-    ccd2    =  (1/2) * np.einsum('klij, abkl -> abij', G_oooo, t_amp)
-    ccd3    =  permute(np.einsum('kbcj, acik -> abij', G_ovvo, t_amp), [[0,1],[2,3]] )                      #PERMUTE _ab ^ij
-    ccd4    =  (1/4) * np.einsum('klcd, abkl, cdij -> abij', G_oovv, t_amp, t_amp)
-    ccd5    =  (1/2) * permute(np.einsum('klcd, acik, dblj -> abij', G_oovv, t_amp, t_amp), [[0,1],[2,3]] ) #PERMUTE _ab ^ij
-    ccd6    = -(1/2) * permute(np.einsum('klcd, cakl, dbij -> abij', G_oovv, t_amp, t_amp), [[0,1]] )       #PERMUTE _ab
-    ccd7    = -(1/2) * permute(np.einsum('klcd, cdki, ablj -> abij', G_oovv, t_amp, t_amp), [[2,3]] )       #PERMUTE ^ij
-    t_amp_new = (1/e_abij)*(mp2_term + ccd1 + ccd2 + ccd3 + ccd4 + ccd5 + ccd6 + ccd7)
-    
-    E_CCD = (1/4)*np.einsum('ijab, abij ->', G_oovv, t_amp_new) 
-    print('CCD iteration %3d: energy %20.14f  dE %1.5E |dT| %1.5E ' % (iteration, E_CCD, E_CCD - Energy, np.linalg.norm(t_amp_new-t_amp)))
-    if  (abs(Energy - E_CCD)) < 1.e-9 and (abs(np.linalg.norm(t_amp_new-t_amp)) < 1.e-9): 
-        break
-    t_amp = t_amp_new
-    Energy = E_CCD
-t1 = time.time() 
-print('CCD correlation energy:')
-print(E_CCD)
-print('Total UCCD energy')
-print(E_SCF + E_CCD)
-print('CCD took %7.5f seconds' % ((t1-t0)))
+O = slice(None, nocc)
+V = slice(nocc, None)
+I_mo_MP2 = np.einsum('pQRS, pP -> PQRS', 
+       np.einsum('pqRS, qQ -> pQRS', 
+       np.einsum('pqrS, rR -> pqRS', 
+       np.einsum('pqrs, sS -> pqrS', I_phys, C_block[:,V]), C_block[:,V]), C_block[:,O]), C_block[:,O]) 
+EMP2 = 0.0
+for i in range(nocc):
+    for j in range(nocc):
+        for a in range(nvirt):
+            for b in range(nvirt):
+                EMP2 += ((1/4)*I_mo_MP2[i, j, a, b]**2)/(orb_energies[i]+orb_energies[j]-orb_energies[a+nocc]-orb_energies[b+nocc])
+t1 = time.time()
+print('MP2 Correlation Energy: %7.10f Eh' % EMP2)
+print('MP2 took %7.5f seconds' % ((t1-t0)))
+print('Total MP2 Energy: %7.10f Eh' % (EMP2+E_SCF))

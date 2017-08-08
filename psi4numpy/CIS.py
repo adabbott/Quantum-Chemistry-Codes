@@ -80,9 +80,6 @@ gmo = np.einsum('pQRS, pP -> PQRS',
 
 # Initialize CIS matrix, dimensions are the number of possible single excitations
 HCIS = np.zeros((nvirt * nocc, nvirt * nocc))
-w = -1
-strings = []
-str2 = '->'
 
 # Build the possible exciation indices
 excitations = []
@@ -98,35 +95,16 @@ for p, left_excitation in enumerate(excitations):
 
 
 ECIS, CCIS = np.linalg.eigh(HCIS)
-print(ECIS)
-print(CCIS)
 
+percent_contrib = np.round(CCIS**2 * 100)
 
 print('CIS:')
 for state in range(len(ECIS)):
     # Print state, energy
     print('State %3d Energy (Eh) %10.10f' % (state, ECIS[state]) , end = ' ')
-    for p, excitation in enumerate(excitations):
-        if CCIS[p, state]**2 * 100 >= 10:
+    for idx, excitation in enumerate(excitations):
+        if percent_contrib[idx, state] > 10:  
             i, a = excitation
-            print('%d%% %d -> %d' % (CCIS[p, state]**2 * 100, i, a), end = ' ')
+            print('%d%% %d -> %d' % (percent_contrib[idx, state], i, a), end = ' ')
     print() 
-
-#stupid eig doesnt sort energies/vectors in increasing order, so we sort
-#CCIS = CCIS[:,ECIS.argsort()]
-
-#ECIS = np.sort(ECIS)
-
-#print('CIS:')
-#for state in range(nvirt*nocc):
-#    coeffs = CCIS[:,state]
-#    print('State %3d Energy (Eh) %15.14f' % (state, ECIS[state]), end=' ')
-#    for element in range(nvirt*nocc):
-#        q = (coeffs[element]**2)*100
-#        if q > 10:
-#            print('%d%% %s' % (q, strings[element]), end=' ')
-#    print()
-#
-#
-
 

@@ -67,10 +67,10 @@ for cc_iter in range(MAXITER):
     cepa3a = np.einsum('kbcj, acik -> abij', g[o, v, v, o], t_amp)
     cepa3b = -cepa3a.transpose(1, 0, 2, 3) 
     cepa3c = -cepa3a.transpose(0, 1, 3, 2) 
-    cepa3d = cepa3a.transpose(1, 0, 3, 2) 
-    cepa3  = cepa3a + cepa3b + cepa3c + cepa3d
+    cepa3d =  cepa3a.transpose(1, 0, 3, 2) 
+    cepa3  =  cepa3a + cepa3b + cepa3c + cepa3d
 
-    ccd1   =  0.25 * np.einsum('klcd, abkl, cdij -> abij', g[o, o, v, v], t_amp, t_amp)
+    ccd1   = 0.25 * np.einsum('klcd, abkl, cdij -> abij', g[o, o, v, v], t_amp, t_amp)
 
     ccd2a  =  np.einsum('klcd, acik, dblj -> abij', g[o, o, v, v], t_amp, t_amp)  
     ccd2b  = -ccd2a.transpose(1, 0, 2, 3) 
@@ -90,7 +90,7 @@ for cc_iter in range(MAXITER):
     E_CCD = (1 / 4) * np.einsum('ijab, abij ->', g[o, o, v, v], t_amp_new)
     t_amp = t_amp_new
     dE = E_CCD - E_old
-    print('CCD Iteration %3d: Energy = %4.16f dE = %1.5E' % (cc_iter, E_CCD, dE))
+    print('CCD Iteration %3d: Energy = %4.12f dE = %1.5E' % (cc_iter, E_CCD, dE))
 
     if abs(dE) < 1.e-10:
         print("\nCCD Iterations have converged!")
@@ -107,5 +107,4 @@ print('CCD Total Energy: %5.15f' % (E_CCD + scf_e))
 psi4_bccd = psi4.energy('bccd', ref_wfn = scf_wfn)
 print('\nPsi4 BCCD Correlation Energy:     ', psi4_bccd - scf_e)
 print('Psi4 BCCD Total Energy:     ', psi4_bccd)
-
 

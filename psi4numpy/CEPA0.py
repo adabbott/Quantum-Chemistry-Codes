@@ -12,7 +12,7 @@ H 1 1.1
 H 1 1.1 2 104
 symmetry c1
 """)
-psi4.set_options({'basis':        'cc-pvtz',
+psi4.set_options({'basis':        '6-31g',
                   'scf_type':     'pk',
                   'mp2_type':     'conv',
                   'e_convergence': 1e-8,
@@ -73,7 +73,7 @@ for cc_iter in range(MAXITER):
     E_CEPA0 = (1 / 4) * np.einsum('ijab, abij ->', g[o, o, v, v], t_amp_new)
     t_amp = t_amp_new
     dE = E_CEPA0 - E_old
-    print('CEPA0 Iteration %3d: Energy = %4.16f dE = %1.5E' % (cc_iter, E_CEPA0, dE))
+    print('CEPA0 Iteration %3d: Energy = %4.12f dE = %1.5E' % (cc_iter, E_CEPA0, dE))
 
     if abs(dE) < 1.e-10:
         print("\nCEPA0 Iterations have converged!")

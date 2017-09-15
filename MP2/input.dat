@@ -1,6 +1,0 @@
-import psi4
-
-psi4.set_options({'basis': 'sto-3g', 'reference': 'uhf',i
- 'scf_type': 'pk','guess': 'core','mp2_type': 'conv',
-'e_convergence': 1e-10})
-psi4.energy('mp2')

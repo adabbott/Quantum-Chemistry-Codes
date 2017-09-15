@@ -2,6 +2,7 @@ import psi4
 import numpy as np
 import configparser
 
+import pprint
 #Read in molecule (geometry, atoms), number of e-, 
 #number of basis functions (orbitals), occupied orbitals, and scf maxiter 
 config = configparser.ConfigParser()
@@ -53,3 +54,4 @@ while abs( E_new - E_old ) > 10e-9:
     iteration += 1
     if iteration == SCF_MAX_ITER:
         break
+

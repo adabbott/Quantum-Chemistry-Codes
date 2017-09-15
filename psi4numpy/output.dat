@@ -1,0 +1,1781 @@
+
+*** tstart() called on adabbott-OptiPlex-7050
+*** at Mon Aug  7 21:04:11 2017
+
+   => Loading Basis Set <=
+
+    Name: 6-31G
+    Role: ORBITAL
+    Keyword: BASIS
+    atoms 1   entry O          line   113 file /home/adabbott/Git/psi4/objdir/stage/usr/local/psi4/share/psi4/basis/6-31g.gbs 
+    atoms 2-3 entry H          line    22 file /home/adabbott/Git/psi4/objdir/stage/usr/local/psi4/share/psi4/basis/6-31g.gbs 
+
+    There are an even number of electrons - assuming singlet.
+    Specify the multiplicity in the molecule input block.
+
+
+         ---------------------------------------------------------
+                                   SCF
+            by Justin Turney, Rob Parrish, Andy Simmonett
+                             and Daniel Smith
+                              RHF Reference
+                        1 Threads,   1907 MiB Core
+         ---------------------------------------------------------
+
+  ==> Geometry <==
+
+    Molecular point group: c1
+    Full point group: C2v
+
+    Geometry (in Angstrom), charge = 0, multiplicity = 1:
+
+       Center              X                  Y                   Z               Mass       
+    ------------   -----------------  -----------------  -----------------  -----------------
+           O          0.000000000000     0.000000000000    -0.075791843589    15.994914619560
+           H          0.000000000000    -0.866811828967     0.601435779270     1.007825032070
+           H          0.000000000000     0.866811828967     0.601435779270     1.007825032070
+
+  Running in c1 symmetry.
+
+  Rotational constants: A =     20.53324  B =     11.13094  C =      7.21807 [cm^-1]
+  Rotational constants: A = 615570.97611  B = 333697.07564  C = 216392.23421 [MHz]
+  Nuclear repulsion =    8.002366450719078
+
+  Charge       = 0
+  Multiplicity = 1
+  Electrons    = 10
+  Nalpha       = 5
+  Nbeta        = 5
+
+  ==> Algorithm <==
+
+  SCF Algorithm Type is PK.
+  DIIS enabled.
+  MOM disabled.
+  Fractional occupation disabled.
+  Guess Type is SAD.
+  Energy threshold   = 1.00e-08
+  Density threshold  = 1.00e-08
+  Integral threshold = 0.00e+00
+
+  ==> Primary Basis <==
+
+  Basis Set: 6-31G
+    Blend: 6-31G
+    Number of shells: 9
+    Number of basis function: 13
+    Number of Cartesian functions: 13
+    Spherical Harmonics?: false
+    Max angular momentum: 1
+
+  ==> Pre-Iterations <==
+
+   -------------------------------------------------------
+    Irrep   Nso     Nmo     Nalpha   Nbeta   Ndocc  Nsocc
+   -------------------------------------------------------
+     A         13      13       0       0       0       0
+   -------------------------------------------------------
+    Total      13      13       5       5       5       0
+   -------------------------------------------------------
+
+  ==> Integral Setup <==
+
+  Using in-core PK algorithm.
+   Calculation information:
+      Number of atoms:                   3
+      Number of AO shells:               9
+      Number of primitives:             22
+      Number of atomic orbitals:        13
+      Number of basis functions:        13
+
+      Integral cutoff                 1.00e-12
+      Number of threads:                 1
+
+  Performing in-core PK
+  Using 8372 doubles for integral storage.
+  We computed 1035 shell quartets total.
+  Whereas there are 1035 unique shell quartets.
+  ==> DiskJK: Disk-Based J/K Matrices <==
+
+    J tasked:                  Yes
+    K tasked:                  Yes
+    wK tasked:                  No
+    Memory (MB):              1430
+    Schwarz Cutoff:          1E-12
+
+    OpenMP threads:              1
+  Minimum eigenvalue in the overlap matrix is 8.9222633057E-02.
+  Using Symmetric Orthogonalization.
+
+  SCF Guess: Superposition of Atomic Densities via on-the-fly atomic UHF.
+
+  ==> Iterations <==
+
+                        Total Energy        Delta E     RMS |[F,P]|
+
+   @RHF iter   0:   -75.71585642333629   -7.57159e+01   9.56428e-02 
+   @RHF iter   1:   -75.92243855352228   -2.06582e-01   1.75235e-02 
+   @RHF iter   2:   -75.94349900260899   -2.10604e-02   1.08687e-02 DIIS
+   @RHF iter   3:   -75.95138886101886   -7.88986e-03   1.94493e-03 DIIS
+   @RHF iter   4:   -75.95234457913838   -9.55718e-04   6.93826e-04 DIIS
+   @RHF iter   5:   -75.95252535140447   -1.80772e-04   1.06051e-04 DIIS
+   @RHF iter   6:   -75.95252888151671   -3.53011e-06   2.54254e-05 DIIS
+   @RHF iter   7:   -75.95252904007903   -1.58562e-07   3.82964e-06 DIIS
+   @RHF iter   8:   -75.95252904446561   -4.38658e-09   9.72547e-07 DIIS
+   @RHF iter   9:   -75.95252904473796   -2.72351e-10   1.30262e-07 DIIS
+   @RHF iter  10:   -75.95252904474177   -3.80851e-12   1.76051e-08 DIIS
+   @RHF iter  11:   -75.95252904474185   -8.52651e-14   1.37510e-09 DIIS
+
+  ==> Post-Iterations <==
+
+    Orbital Energies (a.u.)
+    -----------------------
+
+    Doubly Occupied:                                                      
+
+       1A    -20.588529     2A     -1.293835     3A     -0.637495  
+       4A     -0.540232     5A     -0.496643  
+
+    Virtual:                                                              
+
+       6A      0.166557     7A      0.254876     8A      1.005235  
+       9A      1.028443    10A      1.163404    11A      1.233523  
+      12A      1.363460    13A      1.678202  
+
+    Final Occupation by Irrep:
+              A 
+    DOCC [     5 ]
+
+  Energy converged.
+
+  @RHF Final Energy:   -75.95252904474185
+
+   => Energetics <=
+
+    Nuclear Repulsion Energy =              8.0023664507190784
+    One-Electron Energy =                -120.7963223104818979
+    Two-Electron Energy =                  36.8414268150209736
+    Total Energy =                        -75.9525290447418513
+
+
+
+Properties will be evaluated at   0.000000,   0.000000,   0.000000 Bohr
+
+Properties computed using the SCF density matrix
+
+  Nuclear Dipole Moment: (a.u.)
+     X:     0.0000      Y:     0.0000      Z:     1.1273
+
+  Electronic Dipole Moment: (a.u.)
+     X:     0.0000      Y:    -0.0000      Z:    -0.0795
+
+  Dipole Moment: (a.u.)
+     X:     0.0000      Y:    -0.0000      Z:     1.0478     Total:     1.0478
+
+  Dipole Moment: (Debye)
+     X:     0.0000      Y:    -0.0000      Z:     2.6632     Total:     2.6632
+
+
+*** tstop() called on adabbott-OptiPlex-7050 at Mon Aug  7 21:04:11 2017
+Module time:
+	user time   =       0.14 seconds =       0.00 minutes
+	system time =       0.01 seconds =       0.00 minutes
+	total time  =          0 seconds =       0.00 minutes
+Total time:
+	user time   =       0.14 seconds =       0.00 minutes
+	system time =       0.01 seconds =       0.00 minutes
+	total time  =          0 seconds =       0.00 minutes
+ MINTS: Wrapper to libmints.
+   by Justin Turney
+
+   Calculation information:
+      Number of threads:                 1
+      Number of atoms:                   3
+      Number of AO shells:               9
+      Number of SO shells:               9
+      Number of primitives:             22
+      Number of atomic orbitals:        13
+      Number of basis functions:        13
+
+      Number of irreps:                  1
+      Integral cutoff                 0.00e+00
+      Number of functions per irrep: [  13 ]
+
+ OEINTS: Overlap, kinetic, potential, dipole, and quadrupole integrals
+         stored in file 35.
+
+      Computing two-electron integrals...done
+      Computed 2280 non-zero two-electron integrals.
+        Stored in file 33.
+
+
+*** tstart() called on adabbott-OptiPlex-7050
+*** at Mon Aug  7 21:06:21 2017
+
+
+	Wfn Parameters:
+	--------------------
+	Wavefunction         = BCCD
+	Number of irreps     = 1
+	Number of MOs        = 13
+	Number of active MOs = 13
+	AO-Basis             = NONE
+	Semicanonical        = false
+	Reference            = RHF
+	Print Level          = 1
+
+	IRREP	# MOs	# FZDC	# DOCC	# SOCC	# VIRT	# FZVR
+	-----	-----	------	------	------	------	------
+	 A	   13	    0	    5	    0	    8	    0
+	Transforming integrals...
+	IWL integrals will be retained.
+	(OO|OO)...
+	Presorting SO-basis two-electron integrals.
+	Sorting File: SO Ints (nn|nn) nbuckets = 1
+	Transforming the one-electron integrals and constructing Fock matrices
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OO|OV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OO|VV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OV|OO)...
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OV|OV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OV|VV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(VV|OO)...
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(VV|OV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(VV|VV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	Frozen core energy     =      0.00000000000000
+
+	Size of irrep 0 of <ab|cd> integrals:      0.004 (MW) /      0.033 (MB)
+	Total:                                     0.004 (MW) /      0.033 (MB)
+
+	Size of irrep 0 of <ia|bc> integrals:      0.003 (MW) /      0.020 (MB)
+	Total:                                     0.003 (MW) /      0.020 (MB)
+
+	Size of irrep 0 of tijab amplitudes:       0.002 (MW) /      0.013 (MB)
+	Total:                                     0.002 (MW) /      0.013 (MB)
+
+	Nuclear Rep. energy          =      8.00236645071908
+	SCF energy                   =    -75.95252904474185
+	One-electron energy          =   -120.79632226768408
+	Two-electron energy          =     36.84142677222322
+	Reference energy             =    -75.95252904474177
+
+*** tstop() called on adabbott-OptiPlex-7050 at Mon Aug  7 21:06:21 2017
+Module time:
+	user time   =       0.01 seconds =       0.00 minutes
+	system time =       0.00 seconds =       0.00 minutes
+	total time  =          0 seconds =       0.00 minutes
+Total time:
+	user time   =     129.91 seconds =       2.17 minutes
+	system time =       0.05 seconds =       0.00 minutes
+	total time  =        130 seconds =       2.17 minutes
+
+*** tstart() called on adabbott-OptiPlex-7050
+*** at Mon Aug  7 21:06:21 2017
+
+            **************************
+            *                        *
+            *        CCENERGY        *
+            *                        *
+            **************************
+
+    Nuclear Rep. energy (wfn)     =    8.002366450719078
+    SCF energy          (wfn)     =  -75.952529044741851
+    Reference energy    (file100) =  -75.952529044741766
+
+    Input parameters:
+    -----------------
+    Wave function   =     BCCD
+    Reference wfn   =     RHF
+    Brueckner       =     Yes
+    Brueckner conv. =     1.0e-06
+    Memory (Mbytes) =     2000.0
+    Maxiter         =     50
+    R_Convergence   =     1.0e-07
+    E_Convergence   =     1.0e-08
+    Restart         =     Yes
+    DIIS            =     Yes
+    AO Basis        =     NONE
+    ABCD            =     NEW
+    Cache Level     =     2
+    Cache Type      =     LOW
+    Print Level     =     1
+    Num. of threads =     1
+    # Amps to Print =     10
+    Print MP2 Amps? =     No
+    Analyze T2 Amps =     No
+    Print Pair Ener =     No
+    Local CC        =     No
+    SCS-MP2         =     False
+    SCSN-MP2        =     False
+    SCS-CCSD        =     False
+
+MP2 correlation energy -0.1421198406160244
+                Solving CC Amplitude Equations
+                ------------------------------
+  Iter             Energy              RMS        T1Diag      D1Diag    New D1Diag    D2Diag
+  ----     ---------------------    ---------   ----------  ----------  ----------   --------
+     0        -0.142119840616024    0.000e+00    0.000000    0.000000    0.000000    0.116605
+     1        -0.142904789844423    3.584e-02    0.006202    0.013487    0.013487    0.128148
+     2        -0.148433953889752    1.539e-02    0.007783    0.017454    0.017454    0.139276
+     3        -0.149343643534059    4.484e-03    0.008688    0.020306    0.020306    0.142556
+     4        -0.149399406017635    1.196e-03    0.008806    0.020963    0.020963    0.142967
+     5        -0.149424798525956    4.141e-04    0.008896    0.021373    0.021373    0.143029
+     6        -0.149413130225027    1.178e-04    0.008923    0.021489    0.021489    0.142974
+     7        -0.149413184071764    2.218e-05    0.008928    0.021513    0.021513    0.142969
+     8        -0.149412753232258    5.477e-06    0.008929    0.021518    0.021518    0.142968
+     9        -0.149412699441197    1.192e-06    0.008929    0.021518    0.021518    0.142968
+    10        -0.149412698082998    2.316e-07    0.008929    0.021518    0.021518    0.142968
+    11        -0.149412696888635    3.811e-08    0.008929    0.021518    0.021518    0.142968
+
+    Iterations converged.
+
+
+    Largest TIA Amplitudes:
+              3   0         0.0187276687
+              2   6         0.0138661871
+              3   7        -0.0092484853
+              2   1        -0.0074576928
+              4   4        -0.0069013691
+              1   5        -0.0061438170
+              3   5         0.0036683117
+              2   2        -0.0024011763
+              1   7         0.0020030504
+              1   0        -0.0015697147
+
+    Largest TIjAb Amplitudes:
+      2   2   1   1        -0.0636827308
+      4   4   4   4        -0.0530911005
+      3   3   0   0        -0.0429747988
+      2   3   1   0         0.0401186022
+      3   2   0   1         0.0401186022
+      3   3   5   5        -0.0391652469
+      2   2   0   0        -0.0332218263
+      3   4   5   4        -0.0307186441
+      4   3   4   5        -0.0307186441
+      2   3   0   1         0.0288521863
+
+    SCF energy       (wfn)                    =  -75.952529044741851
+    Reference energy (file100)                =  -75.952529044741766
+
+    Opposite-spin MP2 correlation energy      =   -0.109122562839773
+    Same-spin MP2 correlation energy          =   -0.032997277776251
+    MP2 correlation energy                    =   -0.142119840616024
+      * MP2 total energy                      =  -76.094648885357785
+
+    Opposite-spin CCSD correlation energy     =   -0.124275213650338
+    Same-spin CCSD correlation energy         =   -0.025137483096019
+    CCSD correlation energy                   =   -0.149412696888635
+      * CCSD total energy                     =  -76.101941741630398
+
+    Rotating orbitals.  Maximum T1 =  0.018727668732
+
+*** tstop() called on adabbott-OptiPlex-7050 at Mon Aug  7 21:06:21 2017
+Module time:
+	user time   =       0.07 seconds =       0.00 minutes
+	system time =       0.09 seconds =       0.00 minutes
+	total time  =          0 seconds =       0.00 minutes
+Total time:
+	user time   =     129.98 seconds =       2.17 minutes
+	system time =       0.14 seconds =       0.00 minutes
+	total time  =        130 seconds =       2.17 minutes
+Brueckner convergence check: False
+
+*** tstart() called on adabbott-OptiPlex-7050
+*** at Mon Aug  7 21:06:21 2017
+
+
+	Wfn Parameters:
+	--------------------
+	Wavefunction         = BCCD
+	Number of irreps     = 1
+	Number of MOs        = 13
+	Number of active MOs = 13
+	AO-Basis             = NONE
+	Semicanonical        = false
+	Reference            = RHF
+	Print Level          = 1
+
+	IRREP	# MOs	# FZDC	# DOCC	# SOCC	# VIRT	# FZVR
+	-----	-----	------	------	------	------	------
+	 A	   13	    0	    5	    0	    8	    0
+	Transforming integrals...
+	IWL integrals will be retained.
+	(OO|OO)...
+	Presorting SO-basis two-electron integrals.
+	Sorting File: SO Ints (nn|nn) nbuckets = 1
+	Transforming the one-electron integrals and constructing Fock matrices
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OO|OV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OO|VV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OV|OO)...
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OV|OV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OV|VV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(VV|OO)...
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(VV|OV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(VV|VV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	Frozen core energy     =      0.00000000000000
+
+	Size of irrep 0 of <ab|cd> integrals:      0.004 (MW) /      0.033 (MB)
+	Total:                                     0.004 (MW) /      0.033 (MB)
+
+	Size of irrep 0 of <ia|bc> integrals:      0.003 (MW) /      0.020 (MB)
+	Total:                                     0.003 (MW) /      0.020 (MB)
+
+	Size of irrep 0 of tijab amplitudes:       0.002 (MW) /      0.013 (MB)
+	Total:                                     0.002 (MW) /      0.013 (MB)
+
+	Nuclear Rep. energy          =      8.00236645071908
+	SCF energy                   =    -75.95252904474185
+	One-electron energy          =   -120.70786999927516
+	Two-electron energy          =     36.75472722047868
+	Reference energy             =    -75.95077632807741
+
+*** tstop() called on adabbott-OptiPlex-7050 at Mon Aug  7 21:06:21 2017
+Module time:
+	user time   =       0.02 seconds =       0.00 minutes
+	system time =       0.01 seconds =       0.00 minutes
+	total time  =          0 seconds =       0.00 minutes
+Total time:
+	user time   =     130.00 seconds =       2.17 minutes
+	system time =       0.15 seconds =       0.00 minutes
+	total time  =        130 seconds =       2.17 minutes
+
+*** tstart() called on adabbott-OptiPlex-7050
+*** at Mon Aug  7 21:06:21 2017
+
+            **************************
+            *                        *
+            *        CCENERGY        *
+            *                        *
+            **************************
+
+    Nuclear Rep. energy (wfn)     =    8.002366450719078
+    SCF energy          (wfn)     =  -76.101941741630398
+    Reference energy    (file100) =  -75.950776328077410
+
+    Input parameters:
+    -----------------
+    Wave function   =     BCCD
+    Reference wfn   =     RHF
+    Brueckner       =     Yes
+    Brueckner conv. =     1.0e-06
+    Memory (Mbytes) =     2000.0
+    Maxiter         =     50
+    R_Convergence   =     1.0e-07
+    E_Convergence   =     1.0e-08
+    Restart         =     Yes
+    DIIS            =     Yes
+    AO Basis        =     NONE
+    ABCD            =     NEW
+    Cache Level     =     2
+    Cache Type      =     LOW
+    Print Level     =     1
+    Num. of threads =     1
+    # Amps to Print =     10
+    Print MP2 Amps? =     No
+    Analyze T2 Amps =     No
+    Print Pair Ener =     No
+    Local CC        =     No
+    SCS-MP2         =     False
+    SCSN-MP2        =     False
+    SCS-CCSD        =     False
+
+    Using old T1 amplitudes.
+    Using old T2 amplitudes.
+
+MP2 correlation energy -0.1467654744020158
+                Solving CC Amplitude Equations
+                ------------------------------
+  Iter             Energy              RMS        T1Diag      D1Diag    New D1Diag    D2Diag
+  ----     ---------------------    ---------   ----------  ----------  ----------   --------
+     0        -0.149500527703919    0.000e+00    0.008929    0.021518    0.021518    0.142968
+     1        -0.152040122476498    2.432e-02    0.002016    0.004592    0.004592    0.144828
+     2        -0.151075786846414    4.846e-03    0.001070    0.002605    0.002605    0.143435
+     3        -0.151003310122339    2.164e-03    0.000783    0.002024    0.002024    0.143042
+     4        -0.150962644514904    7.502e-04    0.000792    0.001863    0.001863    0.142854
+     5        -0.150953829168347    2.124e-04    0.000817    0.001776    0.001776    0.142837
+     6        -0.150957558575094    3.627e-05    0.000818    0.001759    0.001759    0.142852
+     7        -0.150958512645737    7.921e-06    0.000818    0.001755    0.001755    0.142857
+     8        -0.150958710124176    1.628e-06    0.000818    0.001755    0.001755    0.142858
+     9        -0.150958765329278    2.564e-07    0.000818    0.001754    0.001754    0.142858
+    10        -0.150958763851736    5.088e-08    0.000818    0.001754    0.001754    0.142858
+    11        -0.150958765263798    1.163e-08    0.000818    0.001754    0.001754    0.142858
+
+    Iterations converged.
+
+
+    Largest TIA Amplitudes:
+              2   1         0.0015773669
+              3   0        -0.0014322506
+              4   4         0.0007057142
+              2   2         0.0005738126
+              3   3        -0.0005513444
+              1   0         0.0005269860
+              3   5         0.0005167103
+              2   6         0.0005105866
+              1   3         0.0003517858
+              1   7         0.0002460076
+
+    Largest TIjAb Amplitudes:
+      2   2   1   1        -0.0639372965
+      4   4   4   4        -0.0530265324
+      3   3   0   0        -0.0431071432
+      2   3   1   0         0.0401645807
+      3   2   0   1         0.0401645807
+      3   3   5   5        -0.0387434139
+      2   2   0   0        -0.0332843301
+      3   4   5   4        -0.0305041032
+      4   3   4   5        -0.0305041032
+      2   3   0   1         0.0290424592
+
+    SCF energy       (wfn)                    =  -76.101941741630398
+    Reference energy (file100)                =  -75.950776328077410
+
+    Opposite-spin MP2 correlation energy      =   -0.111670738883500
+    Same-spin MP2 correlation energy          =   -0.033631060286698
+    MP2 correlation energy                    =   -0.146765474402016
+      * MP2 total energy                      =  -76.097541802479427
+
+    Opposite-spin CCSD correlation energy     =   -0.125668205801003
+    Same-spin CCSD correlation energy         =   -0.025226106338390
+    CCSD correlation energy                   =   -0.150958765263798
+      * CCSD total energy                     =  -76.101735093341205
+
+    Rotating orbitals.  Maximum T1 =  0.001577366948
+
+*** tstop() called on adabbott-OptiPlex-7050 at Mon Aug  7 21:06:21 2017
+Module time:
+	user time   =       0.00 seconds =       0.00 minutes
+	system time =       0.08 seconds =       0.00 minutes
+	total time  =          0 seconds =       0.00 minutes
+Total time:
+	user time   =     130.00 seconds =       2.17 minutes
+	system time =       0.23 seconds =       0.00 minutes
+	total time  =        130 seconds =       2.17 minutes
+Brueckner convergence check: False
+
+*** tstart() called on adabbott-OptiPlex-7050
+*** at Mon Aug  7 21:06:21 2017
+
+
+	Wfn Parameters:
+	--------------------
+	Wavefunction         = BCCD
+	Number of irreps     = 1
+	Number of MOs        = 13
+	Number of active MOs = 13
+	AO-Basis             = NONE
+	Semicanonical        = false
+	Reference            = RHF
+	Print Level          = 1
+
+	IRREP	# MOs	# FZDC	# DOCC	# SOCC	# VIRT	# FZVR
+	-----	-----	------	------	------	------	------
+	 A	   13	    0	    5	    0	    8	    0
+	Transforming integrals...
+	IWL integrals will be retained.
+	(OO|OO)...
+	Presorting SO-basis two-electron integrals.
+	Sorting File: SO Ints (nn|nn) nbuckets = 1
+	Transforming the one-electron integrals and constructing Fock matrices
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OO|OV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OO|VV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OV|OO)...
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OV|OV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OV|VV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(VV|OO)...
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(VV|OV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(VV|VV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	Frozen core energy     =      0.00000000000000
+
+	Size of irrep 0 of <ab|cd> integrals:      0.004 (MW) /      0.033 (MB)
+	Total:                                     0.004 (MW) /      0.033 (MB)
+
+	Size of irrep 0 of <ia|bc> integrals:      0.003 (MW) /      0.020 (MB)
+	Total:                                     0.003 (MW) /      0.020 (MB)
+
+	Size of irrep 0 of tijab amplitudes:       0.002 (MW) /      0.013 (MB)
+	Total:                                     0.002 (MW) /      0.013 (MB)
+
+	Nuclear Rep. energy          =      8.00236645071908
+	SCF energy                   =    -76.10194174163040
+	One-electron energy          =   -120.74298526775269
+	Two-electron energy          =     36.78973725787277
+	Reference energy             =    -75.95088155916083
+
+*** tstop() called on adabbott-OptiPlex-7050 at Mon Aug  7 21:06:21 2017
+Module time:
+	user time   =       0.00 seconds =       0.00 minutes
+	system time =       0.01 seconds =       0.00 minutes
+	total time  =          0 seconds =       0.00 minutes
+Total time:
+	user time   =     130.00 seconds =       2.17 minutes
+	system time =       0.24 seconds =       0.00 minutes
+	total time  =        130 seconds =       2.17 minutes
+
+*** tstart() called on adabbott-OptiPlex-7050
+*** at Mon Aug  7 21:06:21 2017
+
+            **************************
+            *                        *
+            *        CCENERGY        *
+            *                        *
+            **************************
+
+    Nuclear Rep. energy (wfn)     =    8.002366450719078
+    SCF energy          (wfn)     =  -76.101735093341205
+    Reference energy    (file100) =  -75.950881559160834
+
+    Input parameters:
+    -----------------
+    Wave function   =     BCCD
+    Reference wfn   =     RHF
+    Brueckner       =     Yes
+    Brueckner conv. =     1.0e-06
+    Memory (Mbytes) =     2000.0
+    Maxiter         =     50
+    R_Convergence   =     1.0e-07
+    E_Convergence   =     1.0e-08
+    Restart         =     Yes
+    DIIS            =     Yes
+    AO Basis        =     NONE
+    ABCD            =     NEW
+    Cache Level     =     2
+    Cache Type      =     LOW
+    Print Level     =     1
+    Num. of threads =     1
+    # Amps to Print =     10
+    Print MP2 Amps? =     No
+    Analyze T2 Amps =     No
+    Print Pair Ener =     No
+    Local CC        =     No
+    SCS-MP2         =     False
+    SCSN-MP2        =     False
+    SCS-CCSD        =     False
+
+    Using old T1 amplitudes.
+    Using old T2 amplitudes.
+
+MP2 correlation energy -0.1465629987870084
+                Solving CC Amplitude Equations
+                ------------------------------
+  Iter             Energy              RMS        T1Diag      D1Diag    New D1Diag    D2Diag
+  ----     ---------------------    ---------   ----------  ----------  ----------   --------
+     0        -0.150852164072343    0.000e+00    0.000818    0.001754    0.001754    0.142858
+     1        -0.150812189449794    3.367e-03    0.000270    0.000503    0.000503    0.142763
+     2        -0.150845910919471    4.421e-04    0.000178    0.000314    0.000314    0.142828
+     3        -0.150851706311285    1.451e-04    0.000198    0.000393    0.000393    0.142851
+     4        -0.150855585431483    3.866e-05    0.000203    0.000406    0.000406    0.142862
+     5        -0.150855424378707    1.429e-05    0.000204    0.000402    0.000402    0.142864
+     6        -0.150855461216844    3.789e-06    0.000205    0.000400    0.000400    0.142863
+     7        -0.150855458997139    7.551e-07    0.000205    0.000400    0.000400    0.142863
+     8        -0.150855454353422    1.519e-07    0.000205    0.000400    0.000400    0.142863
+     9        -0.150855455627797    2.954e-08    0.000205    0.000400    0.000400    0.142863
+
+    Iterations converged.
+
+
+    Largest TIA Amplitudes:
+              2   1        -0.0003388024
+              3   0         0.0002873457
+              4   4        -0.0002656039
+              3   5        -0.0001995255
+              2   6        -0.0001676462
+              1   0        -0.0001494346
+              3   3         0.0001369226
+              2   2        -0.0001288839
+              1   7        -0.0001172353
+              1   3        -0.0000975483
+
+    Largest TIjAb Amplitudes:
+      2   2   1   1        -0.0638635725
+      4   4   4   4        -0.0530383556
+      3   3   0   0        -0.0430550794
+      2   3   1   0         0.0401212766
+      3   2   0   1         0.0401212766
+      3   3   5   5        -0.0388563408
+      2   2   0   0        -0.0332585242
+      3   4   5   4        -0.0305601005
+      4   3   4   5        -0.0305601005
+      2   3   0   1         0.0290086443
+
+    SCF energy       (wfn)                    =  -76.101735093341205
+    Reference energy (file100)                =  -75.950881559160834
+
+    Opposite-spin MP2 correlation energy      =   -0.111613982362715
+    Same-spin MP2 correlation energy          =   -0.033634472972122
+    MP2 correlation energy                    =   -0.146562998787008
+      * MP2 total energy                      =  -76.097444557947838
+
+    Opposite-spin CCSD correlation energy     =   -0.125633758148946
+    Same-spin CCSD correlation energy         =   -0.025229005399041
+    CCSD correlation energy                   =   -0.150855455627797
+      * CCSD total energy                     =  -76.101737014788625
+
+    Rotating orbitals.  Maximum T1 =  0.000338802400
+
+*** tstop() called on adabbott-OptiPlex-7050 at Mon Aug  7 21:06:21 2017
+Module time:
+	user time   =       0.00 seconds =       0.00 minutes
+	system time =       0.07 seconds =       0.00 minutes
+	total time  =          0 seconds =       0.00 minutes
+Total time:
+	user time   =     130.00 seconds =       2.17 minutes
+	system time =       0.32 seconds =       0.01 minutes
+	total time  =        130 seconds =       2.17 minutes
+Brueckner convergence check: False
+
+*** tstart() called on adabbott-OptiPlex-7050
+*** at Mon Aug  7 21:06:21 2017
+
+
+	Wfn Parameters:
+	--------------------
+	Wavefunction         = BCCD
+	Number of irreps     = 1
+	Number of MOs        = 13
+	Number of active MOs = 13
+	AO-Basis             = NONE
+	Semicanonical        = false
+	Reference            = RHF
+	Print Level          = 1
+
+	IRREP	# MOs	# FZDC	# DOCC	# SOCC	# VIRT	# FZVR
+	-----	-----	------	------	------	------	------
+	 A	   13	    0	    5	    0	    8	    0
+	Transforming integrals...
+	IWL integrals will be retained.
+	(OO|OO)...
+	Presorting SO-basis two-electron integrals.
+	Sorting File: SO Ints (nn|nn) nbuckets = 1
+	Transforming the one-electron integrals and constructing Fock matrices
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OO|OV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OO|VV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OV|OO)...
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OV|OV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OV|VV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(VV|OO)...
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(VV|OV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(VV|VV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	Frozen core energy     =      0.00000000000000
+
+	Size of irrep 0 of <ab|cd> integrals:      0.004 (MW) /      0.033 (MB)
+	Total:                                     0.004 (MW) /      0.033 (MB)
+
+	Size of irrep 0 of <ia|bc> integrals:      0.003 (MW) /      0.020 (MB)
+	Total:                                     0.003 (MW) /      0.020 (MB)
+
+	Size of irrep 0 of tijab amplitudes:       0.002 (MW) /      0.013 (MB)
+	Total:                                     0.002 (MW) /      0.013 (MB)
+
+	Nuclear Rep. energy          =      8.00236645071908
+	SCF energy                   =    -76.10173509334120
+	One-electron energy          =   -120.73298977793742
+	Two-electron energy          =     36.77975828100228
+	Reference energy             =    -75.95086504621605
+
+*** tstop() called on adabbott-OptiPlex-7050 at Mon Aug  7 21:06:21 2017
+Module time:
+	user time   =       0.00 seconds =       0.00 minutes
+	system time =       0.01 seconds =       0.00 minutes
+	total time  =          0 seconds =       0.00 minutes
+Total time:
+	user time   =     130.00 seconds =       2.17 minutes
+	system time =       0.33 seconds =       0.01 minutes
+	total time  =        130 seconds =       2.17 minutes
+
+*** tstart() called on adabbott-OptiPlex-7050
+*** at Mon Aug  7 21:06:21 2017
+
+            **************************
+            *                        *
+            *        CCENERGY        *
+            *                        *
+            **************************
+
+    Nuclear Rep. energy (wfn)     =    8.002366450719078
+    SCF energy          (wfn)     =  -76.101737014788625
+    Reference energy    (file100) =  -75.950865046216052
+
+    Input parameters:
+    -----------------
+    Wave function   =     BCCD
+    Reference wfn   =     RHF
+    Brueckner       =     Yes
+    Brueckner conv. =     1.0e-06
+    Memory (Mbytes) =     2000.0
+    Maxiter         =     50
+    R_Convergence   =     1.0e-07
+    E_Convergence   =     1.0e-08
+    Restart         =     Yes
+    DIIS            =     Yes
+    AO Basis        =     NONE
+    ABCD            =     NEW
+    Cache Level     =     2
+    Cache Type      =     LOW
+    Print Level     =     1
+    Num. of threads =     1
+    # Amps to Print =     10
+    Print MP2 Amps? =     No
+    Analyze T2 Amps =     No
+    Print Pair Ener =     No
+    Local CC        =     No
+    SCS-MP2         =     False
+    SCSN-MP2        =     False
+    SCS-CCSD        =     False
+
+    Using old T1 amplitudes.
+    Using old T2 amplitudes.
+
+MP2 correlation energy -0.1465995029341131
+                Solving CC Amplitude Equations
+                ------------------------------
+  Iter             Energy              RMS        T1Diag      D1Diag    New D1Diag    D2Diag
+  ----     ---------------------    ---------   ----------  ----------  ----------   --------
+     0        -0.150873116680501    0.000e+00    0.000205    0.000400    0.000400    0.142863
+     1        -0.150881287260213    9.005e-04    0.000076    0.000146    0.000146    0.142878
+     2        -0.150873611036444    1.153e-04    0.000050    0.000094    0.000094    0.142866
+     3        -0.150872555374566    2.267e-05    0.000053    0.000103    0.000103    0.142864
+     4        -0.150871601671981    7.123e-06    0.000054    0.000105    0.000105    0.142862
+     5        -0.150871599340425    2.337e-06    0.000054    0.000105    0.000105    0.142861
+     6        -0.150871593924139    7.249e-07    0.000055    0.000105    0.000105    0.142861
+     7        -0.150871595851700    1.523e-07    0.000055    0.000105    0.000105    0.142861
+     8        -0.150871597071822    2.765e-08    0.000055    0.000105    0.000105    0.142861
+
+    Iterations converged.
+
+
+    Largest TIA Amplitudes:
+              2   1         0.0000872720
+              4   4         0.0000741303
+              3   0        -0.0000725074
+              3   5         0.0000569415
+              2   6         0.0000479305
+              1   0         0.0000399045
+              3   3        -0.0000362176
+              1   7         0.0000334183
+              2   2         0.0000318211
+              1   3         0.0000251075
+
+    Largest TIjAb Amplitudes:
+      2   2   1   1        -0.0638842449
+      4   4   4   4        -0.0530353963
+      3   3   0   0        -0.0430685635
+      2   3   1   0         0.0401329557
+      3   2   0   1         0.0401329557
+      3   3   5   5        -0.0388253782
+      2   2   0   0        -0.0332647553
+      3   4   5   4        -0.0305445943
+      4   3   4   5        -0.0305445943
+      2   3   0   1         0.0290168912
+
+    SCF energy       (wfn)                    =  -76.101737014788625
+    Reference energy (file100)                =  -75.950865046216052
+
+    Opposite-spin MP2 correlation energy      =   -0.111624094400064
+    Same-spin MP2 correlation energy          =   -0.033633361317331
+    MP2 correlation energy                    =   -0.146599502934113
+      * MP2 total energy                      =  -76.097464549150160
+
+    Opposite-spin CCSD correlation energy     =   -0.125640582911406
+    Same-spin CCSD correlation energy         =   -0.025228784145109
+    CCSD correlation energy                   =   -0.150871597071822
+      * CCSD total energy                     =  -76.101736643287879
+
+    Rotating orbitals.  Maximum T1 =  0.000087271982
+
+*** tstop() called on adabbott-OptiPlex-7050 at Mon Aug  7 21:06:22 2017
+Module time:
+	user time   =       0.00 seconds =       0.00 minutes
+	system time =       0.07 seconds =       0.00 minutes
+	total time  =          1 seconds =       0.02 minutes
+Total time:
+	user time   =     130.00 seconds =       2.17 minutes
+	system time =       0.40 seconds =       0.01 minutes
+	total time  =        131 seconds =       2.18 minutes
+Brueckner convergence check: False
+
+*** tstart() called on adabbott-OptiPlex-7050
+*** at Mon Aug  7 21:06:22 2017
+
+
+	Wfn Parameters:
+	--------------------
+	Wavefunction         = BCCD
+	Number of irreps     = 1
+	Number of MOs        = 13
+	Number of active MOs = 13
+	AO-Basis             = NONE
+	Semicanonical        = false
+	Reference            = RHF
+	Print Level          = 1
+
+	IRREP	# MOs	# FZDC	# DOCC	# SOCC	# VIRT	# FZVR
+	-----	-----	------	------	------	------	------
+	 A	   13	    0	    5	    0	    8	    0
+	Transforming integrals...
+	IWL integrals will be retained.
+	(OO|OO)...
+	Presorting SO-basis two-electron integrals.
+	Sorting File: SO Ints (nn|nn) nbuckets = 1
+	Transforming the one-electron integrals and constructing Fock matrices
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OO|OV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OO|VV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OV|OO)...
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OV|OV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OV|VV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(VV|OO)...
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(VV|OV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(VV|VV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	Frozen core energy     =      0.00000000000000
+
+	Size of irrep 0 of <ab|cd> integrals:      0.004 (MW) /      0.033 (MB)
+	Total:                                     0.004 (MW) /      0.033 (MB)
+
+	Size of irrep 0 of <ia|bc> integrals:      0.003 (MW) /      0.020 (MB)
+	Total:                                     0.003 (MW) /      0.020 (MB)
+
+	Size of irrep 0 of tijab amplitudes:       0.002 (MW) /      0.013 (MB)
+	Total:                                     0.002 (MW) /      0.013 (MB)
+
+	Nuclear Rep. energy          =      8.00236645071908
+	SCF energy                   =    -76.10173701478863
+	One-electron energy          =   -120.73569858242527
+	Two-electron energy          =     36.78246276496569
+	Reference energy             =    -75.95086936674051
+
+*** tstop() called on adabbott-OptiPlex-7050 at Mon Aug  7 21:06:22 2017
+Module time:
+	user time   =       0.01 seconds =       0.00 minutes
+	system time =       0.01 seconds =       0.00 minutes
+	total time  =          0 seconds =       0.00 minutes
+Total time:
+	user time   =     130.01 seconds =       2.17 minutes
+	system time =       0.41 seconds =       0.01 minutes
+	total time  =        131 seconds =       2.18 minutes
+
+*** tstart() called on adabbott-OptiPlex-7050
+*** at Mon Aug  7 21:06:22 2017
+
+            **************************
+            *                        *
+            *        CCENERGY        *
+            *                        *
+            **************************
+
+    Nuclear Rep. energy (wfn)     =    8.002366450719078
+    SCF energy          (wfn)     =  -76.101736643287879
+    Reference energy    (file100) =  -75.950869366740505
+
+    Input parameters:
+    -----------------
+    Wave function   =     BCCD
+    Reference wfn   =     RHF
+    Brueckner       =     Yes
+    Brueckner conv. =     1.0e-06
+    Memory (Mbytes) =     2000.0
+    Maxiter         =     50
+    R_Convergence   =     1.0e-07
+    E_Convergence   =     1.0e-08
+    Restart         =     Yes
+    DIIS            =     Yes
+    AO Basis        =     NONE
+    ABCD            =     NEW
+    Cache Level     =     2
+    Cache Type      =     LOW
+    Print Level     =     1
+    Num. of threads =     1
+    # Amps to Print =     10
+    Print MP2 Amps? =     No
+    Analyze T2 Amps =     No
+    Print Pair Ener =     No
+    Local CC        =     No
+    SCS-MP2         =     False
+    SCSN-MP2        =     False
+    SCS-CCSD        =     False
+
+    Using old T1 amplitudes.
+    Using old T2 amplitudes.
+
+MP2 correlation energy -0.1465898161760421
+                Solving CC Amplitude Equations
+                ------------------------------
+  Iter             Energy              RMS        T1Diag      D1Diag    New D1Diag    D2Diag
+  ----     ---------------------    ---------   ----------  ----------  ----------   --------
+     0        -0.150866412588001    0.000e+00    0.000055    0.000105    0.000105    0.142861
+     1        -0.150864894362963    2.418e-04    0.000021    0.000040    0.000040    0.142858
+     2        -0.150866857622019    3.101e-05    0.000014    0.000026    0.000026    0.142861
+     3        -0.150867112809240    5.387e-06    0.000014    0.000027    0.000027    0.142861
+     4        -0.150867354090774    1.686e-06    0.000015    0.000028    0.000028    0.142862
+     5        -0.150867357795111    5.535e-07    0.000015    0.000028    0.000028    0.142862
+     6        -0.150867359232358    1.745e-07    0.000015    0.000028    0.000028    0.142862
+     7        -0.150867358768236    3.806e-08    0.000015    0.000028    0.000028    0.142862
+
+    Iterations converged.
+
+
+    Largest TIA Amplitudes:
+              2   1        -0.0000232160
+              4   4        -0.0000200251
+              3   0         0.0000191559
+              3   5        -0.0000154477
+              2   6        -0.0000129910
+              1   0        -0.0000107017
+              3   3         0.0000096486
+              1   7        -0.0000090574
+              2   2        -0.0000083682
+              1   3        -0.0000066680
+
+    Largest TIjAb Amplitudes:
+      2   2   1   1        -0.0638786389
+      4   4   4   4        -0.0530361807
+      3   3   0   0        -0.0430649296
+      2   3   1   0         0.0401297970
+      3   2   0   1         0.0401297970
+      3   3   5   5        -0.0388337170
+      2   2   0   0        -0.0332631094
+      3   4   5   4        -0.0305487783
+      4   3   4   5        -0.0305487783
+      2   3   0   1         0.0290147033
+
+    SCF energy       (wfn)                    =  -76.101736643287879
+    Reference energy (file100)                =  -75.950869366740505
+
+    Opposite-spin MP2 correlation energy      =   -0.111621734301193
+    Same-spin MP2 correlation energy          =   -0.033633683793915
+    MP2 correlation energy                    =   -0.146589816176042
+      * MP2 total energy                      =  -76.097459182916552
+
+    Opposite-spin CCSD correlation energy     =   -0.125639041108627
+    Same-spin CCSD correlation energy         =   -0.025228866119234
+    CCSD correlation energy                   =   -0.150867358768236
+      * CCSD total energy                     =  -76.101736725508744
+
+    Rotating orbitals.  Maximum T1 =  0.000023216014
+
+*** tstop() called on adabbott-OptiPlex-7050 at Mon Aug  7 21:06:22 2017
+Module time:
+	user time   =       0.03 seconds =       0.00 minutes
+	system time =       0.04 seconds =       0.00 minutes
+	total time  =          0 seconds =       0.00 minutes
+Total time:
+	user time   =     130.04 seconds =       2.17 minutes
+	system time =       0.45 seconds =       0.01 minutes
+	total time  =        131 seconds =       2.18 minutes
+Brueckner convergence check: False
+
+*** tstart() called on adabbott-OptiPlex-7050
+*** at Mon Aug  7 21:06:22 2017
+
+
+	Wfn Parameters:
+	--------------------
+	Wavefunction         = BCCD
+	Number of irreps     = 1
+	Number of MOs        = 13
+	Number of active MOs = 13
+	AO-Basis             = NONE
+	Semicanonical        = false
+	Reference            = RHF
+	Print Level          = 1
+
+	IRREP	# MOs	# FZDC	# DOCC	# SOCC	# VIRT	# FZVR
+	-----	-----	------	------	------	------	------
+	 A	   13	    0	    5	    0	    8	    0
+	Transforming integrals...
+	IWL integrals will be retained.
+	(OO|OO)...
+	Presorting SO-basis two-electron integrals.
+	Sorting File: SO Ints (nn|nn) nbuckets = 1
+	Transforming the one-electron integrals and constructing Fock matrices
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OO|OV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OO|VV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OV|OO)...
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OV|OV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OV|VV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(VV|OO)...
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(VV|OV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(VV|VV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	Frozen core energy     =      0.00000000000000
+
+	Size of irrep 0 of <ab|cd> integrals:      0.004 (MW) /      0.033 (MB)
+	Total:                                     0.004 (MW) /      0.033 (MB)
+
+	Size of irrep 0 of <ia|bc> integrals:      0.003 (MW) /      0.020 (MB)
+	Total:                                     0.003 (MW) /      0.020 (MB)
+
+	Size of irrep 0 of tijab amplitudes:       0.002 (MW) /      0.013 (MB)
+	Total:                                     0.002 (MW) /      0.013 (MB)
+
+	Nuclear Rep. energy          =      8.00236645071908
+	SCF energy                   =    -76.10173664328788
+	One-electron energy          =   -120.73497125620477
+	Two-electron energy          =     36.78173654572618
+	Reference energy             =    -75.95086825975952
+
+*** tstop() called on adabbott-OptiPlex-7050 at Mon Aug  7 21:06:22 2017
+Module time:
+	user time   =       0.01 seconds =       0.00 minutes
+	system time =       0.00 seconds =       0.00 minutes
+	total time  =          0 seconds =       0.00 minutes
+Total time:
+	user time   =     130.05 seconds =       2.17 minutes
+	system time =       0.45 seconds =       0.01 minutes
+	total time  =        131 seconds =       2.18 minutes
+
+*** tstart() called on adabbott-OptiPlex-7050
+*** at Mon Aug  7 21:06:22 2017
+
+            **************************
+            *                        *
+            *        CCENERGY        *
+            *                        *
+            **************************
+
+    Nuclear Rep. energy (wfn)     =    8.002366450719078
+    SCF energy          (wfn)     =  -76.101736725508744
+    Reference energy    (file100) =  -75.950868259759517
+
+    Input parameters:
+    -----------------
+    Wave function   =     BCCD
+    Reference wfn   =     RHF
+    Brueckner       =     Yes
+    Brueckner conv. =     1.0e-06
+    Memory (Mbytes) =     2000.0
+    Maxiter         =     50
+    R_Convergence   =     1.0e-07
+    E_Convergence   =     1.0e-08
+    Restart         =     Yes
+    DIIS            =     Yes
+    AO Basis        =     NONE
+    ABCD            =     NEW
+    Cache Level     =     2
+    Cache Type      =     LOW
+    Print Level     =     1
+    Num. of threads =     1
+    # Amps to Print =     10
+    Print MP2 Amps? =     No
+    Analyze T2 Amps =     No
+    Print Pair Ener =     No
+    Local CC        =     No
+    SCS-MP2         =     False
+    SCSN-MP2        =     False
+    SCS-CCSD        =     False
+
+    Using old T1 amplitudes.
+    Using old T2 amplitudes.
+
+MP2 correlation energy -0.1465923320212226
+                Solving CC Amplitude Equations
+                ------------------------------
+  Iter             Energy              RMS        T1Diag      D1Diag    New D1Diag    D2Diag
+  ----     ---------------------    ---------   ----------  ----------  ----------   --------
+     0        -0.150868690838505    0.000e+00    0.000015    0.000028    0.000028    0.142862
+     1        -0.150869097788217    6.480e-05    0.000006    0.000011    0.000011    0.142863
+     2        -0.150868575399830    8.316e-06    0.000004    0.000007    0.000007    0.142862
+     3        -0.150868508574291    1.403e-06    0.000004    0.000007    0.000007    0.142862
+     4        -0.150868445003772    4.352e-07    0.000004    0.000007    0.000007    0.142862
+     5        -0.150868443805783    1.423e-07    0.000004    0.000007    0.000007    0.142862
+     6        -0.150868443786704    4.525e-08    0.000004    0.000007    0.000007    0.142862
+
+    Iterations converged.
+
+
+    Largest TIA Amplitudes:
+              2   1         0.0000062322
+              4   4         0.0000053740
+              3   0        -0.0000050507
+              3   5         0.0000041481
+              2   6         0.0000034907
+              1   0         0.0000028820
+              3   3        -0.0000025711
+              1   7         0.0000024313
+              2   2         0.0000022413
+              1   3         0.0000017873
+
+    Largest TIjAb Amplitudes:
+      2   2   1   1        -0.0638801410
+      4   4   4   4        -0.0530359697
+      3   3   0   0        -0.0430659266
+      2   3   1   0         0.0401306556
+      3   2   0   1         0.0401306556
+      3   3   5   5        -0.0388314775
+      2   2   0   0        -0.0332635387
+      3   4   5   4        -0.0305476552
+      4   3   4   5        -0.0305476552
+      2   3   0   1         0.0290152996
+
+    SCF energy       (wfn)                    =  -76.101736725508744
+    Reference energy (file100)                =  -75.950868259759517
+
+    Opposite-spin MP2 correlation energy      =   -0.111622350129955
+    Same-spin MP2 correlation energy          =   -0.033633597246238
+    MP2 correlation energy                    =   -0.146592332021223
+      * MP2 total energy                      =  -76.097460591780745
+
+    Opposite-spin CCSD correlation energy     =   -0.125639448306789
+    Same-spin CCSD correlation energy         =   -0.025228847303373
+    CCSD correlation energy                   =   -0.150868443786704
+      * CCSD total energy                     =  -76.101736703546223
+
+    Rotating orbitals.  Maximum T1 =  0.000006232175
+
+*** tstop() called on adabbott-OptiPlex-7050 at Mon Aug  7 21:06:22 2017
+Module time:
+	user time   =       0.03 seconds =       0.00 minutes
+	system time =       0.02 seconds =       0.00 minutes
+	total time  =          0 seconds =       0.00 minutes
+Total time:
+	user time   =     130.08 seconds =       2.17 minutes
+	system time =       0.47 seconds =       0.01 minutes
+	total time  =        131 seconds =       2.18 minutes
+Brueckner convergence check: False
+
+*** tstart() called on adabbott-OptiPlex-7050
+*** at Mon Aug  7 21:06:22 2017
+
+
+	Wfn Parameters:
+	--------------------
+	Wavefunction         = BCCD
+	Number of irreps     = 1
+	Number of MOs        = 13
+	Number of active MOs = 13
+	AO-Basis             = NONE
+	Semicanonical        = false
+	Reference            = RHF
+	Print Level          = 1
+
+	IRREP	# MOs	# FZDC	# DOCC	# SOCC	# VIRT	# FZVR
+	-----	-----	------	------	------	------	------
+	 A	   13	    0	    5	    0	    8	    0
+	Transforming integrals...
+	IWL integrals will be retained.
+	(OO|OO)...
+	Presorting SO-basis two-electron integrals.
+	Sorting File: SO Ints (nn|nn) nbuckets = 1
+	Transforming the one-electron integrals and constructing Fock matrices
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OO|OV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OO|VV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OV|OO)...
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OV|OV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OV|VV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(VV|OO)...
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(VV|OV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(VV|VV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	Frozen core energy     =      0.00000000000000
+
+	Size of irrep 0 of <ab|cd> integrals:      0.004 (MW) /      0.033 (MB)
+	Total:                                     0.004 (MW) /      0.033 (MB)
+
+	Size of irrep 0 of <ia|bc> integrals:      0.003 (MW) /      0.020 (MB)
+	Total:                                     0.003 (MW) /      0.020 (MB)
+
+	Size of irrep 0 of tijab amplitudes:       0.002 (MW) /      0.013 (MB)
+	Total:                                     0.002 (MW) /      0.013 (MB)
+
+	Nuclear Rep. energy          =      8.00236645071908
+	SCF energy                   =    -76.10173672550874
+	One-electron energy          =   -120.73516612294796
+	Two-electron energy          =     36.78193111683883
+	Reference energy             =    -75.95086855539004
+
+*** tstop() called on adabbott-OptiPlex-7050 at Mon Aug  7 21:06:22 2017
+Module time:
+	user time   =       0.00 seconds =       0.00 minutes
+	system time =       0.01 seconds =       0.00 minutes
+	total time  =          0 seconds =       0.00 minutes
+Total time:
+	user time   =     130.08 seconds =       2.17 minutes
+	system time =       0.48 seconds =       0.01 minutes
+	total time  =        131 seconds =       2.18 minutes
+
+*** tstart() called on adabbott-OptiPlex-7050
+*** at Mon Aug  7 21:06:22 2017
+
+            **************************
+            *                        *
+            *        CCENERGY        *
+            *                        *
+            **************************
+
+    Nuclear Rep. energy (wfn)     =    8.002366450719078
+    SCF energy          (wfn)     =  -76.101736703546223
+    Reference energy    (file100) =  -75.950868555390045
+
+    Input parameters:
+    -----------------
+    Wave function   =     BCCD
+    Reference wfn   =     RHF
+    Brueckner       =     Yes
+    Brueckner conv. =     1.0e-06
+    Memory (Mbytes) =     2000.0
+    Maxiter         =     50
+    R_Convergence   =     1.0e-07
+    E_Convergence   =     1.0e-08
+    Restart         =     Yes
+    DIIS            =     Yes
+    AO Basis        =     NONE
+    ABCD            =     NEW
+    Cache Level     =     2
+    Cache Type      =     LOW
+    Print Level     =     1
+    Num. of threads =     1
+    # Amps to Print =     10
+    Print MP2 Amps? =     No
+    Analyze T2 Amps =     No
+    Print Pair Ener =     No
+    Local CC        =     No
+    SCS-MP2         =     False
+    SCSN-MP2        =     False
+    SCS-CCSD        =     False
+
+    Using old T1 amplitudes.
+    Using old T2 amplitudes.
+
+MP2 correlation energy -0.1465916594171482
+                Solving CC Amplitude Equations
+                ------------------------------
+  Iter             Energy              RMS        T1Diag      D1Diag    New D1Diag    D2Diag
+  ----     ---------------------    ---------   ----------  ----------  ----------   --------
+     0        -0.150868084924678    0.000e+00    0.000004    0.000007    0.000007    0.142862
+     1        -0.150867979583889    1.735e-05    0.000001    0.000003    0.000003    0.142861
+     2        -0.150868118681112    2.227e-06    0.000001    0.000002    0.000002    0.142862
+     3        -0.150868136438079    3.663e-07    0.000001    0.000002    0.000002    0.142862
+     4        -0.150868153153000    1.100e-07    0.000001    0.000002    0.000002    0.142862
+     5        -0.150868153548985    3.486e-08    0.000001    0.000002    0.000002    0.142862
+     6        -0.150868153577120    1.138e-08    0.000001    0.000002    0.000002    0.142862
+
+    Iterations converged.
+
+
+    Largest TIA Amplitudes:
+              2   1        -0.0000016756
+              4   4        -0.0000014416
+              3   0         0.0000013097
+              3   5        -0.0000011127
+              2   6        -0.0000009366
+              1   0        -0.0000007799
+              3   3         0.0000006831
+              1   7        -0.0000006516
+              2   2        -0.0000006035
+              1   3        -0.0000004805
+
+    Largest TIjAb Amplitudes:
+      2   2   1   1        -0.0638797388
+      4   4   4   4        -0.0530360268
+      3   3   0   0        -0.0430656474
+      2   3   1   0         0.0401304172
+      3   2   0   1         0.0401304172
+      3   3   5   5        -0.0388320805
+      2   2   0   0        -0.0332634262
+      3   4   5   4        -0.0305479573
+      4   3   4   5        -0.0305479573
+      2   3   0   1         0.0290151328
+
+    SCF energy       (wfn)                    =  -76.101736703546223
+    Reference energy (file100)                =  -75.950868555390045
+
+    Opposite-spin MP2 correlation energy      =   -0.111622187485454
+    Same-spin MP2 correlation energy          =   -0.033633620828426
+    MP2 correlation energy                    =   -0.146591659417148
+      * MP2 total energy                      =  -76.097460214807199
+
+    Opposite-spin CCSD correlation energy     =   -0.125639339848739
+    Same-spin CCSD correlation energy         =   -0.025228852580438
+    CCSD correlation energy                   =   -0.150868153577120
+      * CCSD total energy                     =  -76.101736708967167
+
+    Rotating orbitals.  Maximum T1 =  0.000001675608
+
+*** tstop() called on adabbott-OptiPlex-7050 at Mon Aug  7 21:06:22 2017
+Module time:
+	user time   =       0.03 seconds =       0.00 minutes
+	system time =       0.03 seconds =       0.00 minutes
+	total time  =          0 seconds =       0.00 minutes
+Total time:
+	user time   =     130.11 seconds =       2.17 minutes
+	system time =       0.51 seconds =       0.01 minutes
+	total time  =        131 seconds =       2.18 minutes
+Brueckner convergence check: False
+
+*** tstart() called on adabbott-OptiPlex-7050
+*** at Mon Aug  7 21:06:22 2017
+
+
+	Wfn Parameters:
+	--------------------
+	Wavefunction         = BCCD
+	Number of irreps     = 1
+	Number of MOs        = 13
+	Number of active MOs = 13
+	AO-Basis             = NONE
+	Semicanonical        = false
+	Reference            = RHF
+	Print Level          = 1
+
+	IRREP	# MOs	# FZDC	# DOCC	# SOCC	# VIRT	# FZVR
+	-----	-----	------	------	------	------	------
+	 A	   13	    0	    5	    0	    8	    0
+	Transforming integrals...
+	IWL integrals will be retained.
+	(OO|OO)...
+	Presorting SO-basis two-electron integrals.
+	Sorting File: SO Ints (nn|nn) nbuckets = 1
+	Transforming the one-electron integrals and constructing Fock matrices
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OO|OV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OO|VV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OV|OO)...
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OV|OV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(OV|VV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(VV|OO)...
+	Starting first half-transformation.
+	Sorting half-transformed integrals.
+	First half integral transformation complete.
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(VV|OV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	(VV|VV)...
+	Starting second half-transformation.
+	Two-electron integral transformation complete.
+	Frozen core energy     =      0.00000000000000
+
+	Size of irrep 0 of <ab|cd> integrals:      0.004 (MW) /      0.033 (MB)
+	Total:                                     0.004 (MW) /      0.033 (MB)
+
+	Size of irrep 0 of <ia|bc> integrals:      0.003 (MW) /      0.020 (MB)
+	Total:                                     0.003 (MW) /      0.020 (MB)
+
+	Size of irrep 0 of tijab amplitudes:       0.002 (MW) /      0.013 (MB)
+	Total:                                     0.002 (MW) /      0.013 (MB)
+
+	Nuclear Rep. energy          =      8.00236645071908
+	SCF energy                   =    -76.10173670354622
+	One-electron energy          =   -120.73511399546049
+	Two-electron energy          =     36.78187906710721
+	Reference energy             =    -75.95086847763420
+
+*** tstop() called on adabbott-OptiPlex-7050 at Mon Aug  7 21:06:22 2017
+Module time:
+	user time   =       0.00 seconds =       0.00 minutes
+	system time =       0.01 seconds =       0.00 minutes
+	total time  =          0 seconds =       0.00 minutes
+Total time:
+	user time   =     130.11 seconds =       2.17 minutes
+	system time =       0.52 seconds =       0.01 minutes
+	total time  =        131 seconds =       2.18 minutes
+
+*** tstart() called on adabbott-OptiPlex-7050
+*** at Mon Aug  7 21:06:22 2017
+
+            **************************
+            *                        *
+            *        CCENERGY        *
+            *                        *
+            **************************
+
+    Nuclear Rep. energy (wfn)     =    8.002366450719078
+    SCF energy          (wfn)     =  -76.101736708967167
+    Reference energy    (file100) =  -75.950868477634202
+
+    Input parameters:
+    -----------------
+    Wave function   =     BCCD
+    Reference wfn   =     RHF
+    Brueckner       =     Yes
+    Brueckner conv. =     1.0e-06
+    Memory (Mbytes) =     2000.0
+    Maxiter         =     50
+    R_Convergence   =     1.0e-07
+    E_Convergence   =     1.0e-08
+    Restart         =     Yes
+    DIIS            =     Yes
+    AO Basis        =     NONE
+    ABCD            =     NEW
+    Cache Level     =     2
+    Cache Type      =     LOW
+    Print Level     =     1
+    Num. of threads =     1
+    # Amps to Print =     10
+    Print MP2 Amps? =     No
+    Analyze T2 Amps =     No
+    Print Pair Ener =     No
+    Local CC        =     No
+    SCS-MP2         =     False
+    SCSN-MP2        =     False
+    SCS-CCSD        =     False
+
+    Using old T1 amplitudes.
+    Using old T2 amplitudes.
+
+MP2 correlation energy -0.1465918371147191
+                Solving CC Amplitude Equations
+                ------------------------------
+  Iter             Energy              RMS        T1Diag      D1Diag    New D1Diag    D2Diag
+  ----     ---------------------    ---------   ----------  ----------  ----------   --------
+     0        -0.150868248736039    0.000e+00    0.000001    0.000002    0.000002    0.142862
+     1        -0.150868276170471    4.637e-06    0.000000    0.000001    0.000001    0.142862
+     2        -0.150868239290953    5.950e-07    0.000000    0.000000    0.000000    0.142862
+     3        -0.150868234543583    9.530e-08    0.000000    0.000001    0.000001    0.142862
+     4        -0.150868231287142    2.770e-08    0.000000    0.000001    0.000001    0.142862
+
+    Iterations converged.
+
+
+    Largest TIA Amplitudes:
+              2   1         0.0000004423
+              4   4         0.0000003892
+              3   0        -0.0000003306
+              3   5         0.0000003006
+              2   6         0.0000002511
+              1   0         0.0000002088
+              3   3        -0.0000001833
+              1   7         0.0000001757
+              2   2         0.0000001591
+              1   3         0.0000001272
+
+    Largest TIjAb Amplitudes:
+      2   2   1   1        -0.0638798467
+      4   4   4   4        -0.0530360120
+      3   3   0   0        -0.0430657250
+      2   3   1   0         0.0401304850
+      3   2   0   1         0.0401304850
+      3   3   5   5        -0.0388319186
+      2   2   0   0        -0.0332634584
+      3   4   5   4        -0.0305478761
+      4   3   4   5        -0.0305478761
+      2   3   0   1         0.0290151797
+
+    SCF energy       (wfn)                    =  -76.101736708967167
+    Reference energy (file100)                =  -75.950868477634202
+
+    Opposite-spin MP2 correlation energy      =   -0.111622230012697
+    Same-spin MP2 correlation energy          =   -0.033633614273042
+    MP2 correlation energy                    =   -0.146591837114719
+      * MP2 total energy                      =  -76.097460314748915
+
+    Opposite-spin CCSD correlation energy     =   -0.125639370559554
+    Same-spin CCSD correlation energy         =   -0.025228850746508
+    CCSD correlation energy                   =   -0.150868231287142
+      * CCSD total energy                     =  -76.101736708921351
+
+    Brueckner orbitals converged.  Maximum T1 =  0.000000442262
+
+*** tstop() called on adabbott-OptiPlex-7050 at Mon Aug  7 21:06:22 2017
+Module time:
+	user time   =       0.01 seconds =       0.00 minutes
+	system time =       0.03 seconds =       0.00 minutes
+	total time  =          0 seconds =       0.00 minutes
+Total time:
+	user time   =     130.12 seconds =       2.17 minutes
+	system time =       0.55 seconds =       0.01 minutes
+	total time  =        131 seconds =       2.18 minutes
+Brueckner convergence check: True

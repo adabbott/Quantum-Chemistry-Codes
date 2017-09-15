@@ -35,21 +35,9 @@ H = T + V
 
 D = np.zeros((norb,norb))
 
-
 E_new = 1.0
 v = 0
 E_old = 0.0
 iteration = 1
 
-while abs( E_new - E_old ) > 10e-9:
-    E_old = E_new 
-    F = H + 2*np.einsum('pqrs,rs->pq', I, D) - np.einsum('prqs,rs->pq', I, D)  
-    E_new = np.einsum('pq,qp->', H + F  , D) + Enuc
-    print('RHF iteration %3d: energy %20.14f  dE %1.5E' % (iteration, E_new, (E_old - E_new)))
-    Ft = A.dot(F).dot(A)
-    e, C = np.linalg.eigh(Ft)
-    C = A.dot(C)[:, :nocc]
-    D = np.einsum('pi,qi->pq', C, C)
-    iteration += 1
-    if iteration == SCF_MAX_ITER:
-        break
+#to be implemented later

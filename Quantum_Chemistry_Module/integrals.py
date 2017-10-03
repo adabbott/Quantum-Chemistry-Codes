@@ -1,16 +1,6 @@
 import psi4
 import numpy as np
 import molecule
-psi4.core.be_quiet()
-geom = psi4.geometry("""
-O
-H 1 1.1
-H 1 1.1 2 104
-""")
-
-mol = molecule.Molecule(0, 1, geom, "sto-3g")
-
-basis = mol.basis
 
 def obara_saika_recursion(PA, PB, alpha, AMa, AMb):
     if len(PA) != 3 or len(PB) != 3:
@@ -101,7 +91,18 @@ def obara_saika_recursion(PA, PB, alpha, AMa, AMb):
     # Return the results
     return (x, y, z)
 
-def compute_integrals(basis):
+def compute_integrals(mol):
+    """
+    Computes the integrals for hartree fock
+    Parameters
+    ----------
+    A Molecule object
+    Returns
+    ------- 
+    Overlap, Kinetic, Potential, and 2-electron integrals in a tuple
+    """
+    
+    basis = mol.basis
     
     # make space to store the overlap, kinetic, and dipole integral matrices
     S = np.zeros((basis.nao(),basis.nao()))
@@ -133,8 +134,8 @@ def compute_integrals(basis):
                     # defining centers for each basis function 
                     # mol.x() returns the x coordinate of the atom given by ishell.ncenter
                     # we use this to define a coordinate vector for our centers
-                    A = np.array([mol.x(ishell.ncenter), mol.y(ishell.ncenter), mol.z(ishell.ncenter)])
-                    B = np.array([mol.x(jshell.ncenter), mol.y(jshell.ncenter), mol.z(jshell.ncenter)])
+                    A = np.array([mol.geometry.x(ishell.ncenter), mol.geometry.y(ishell.ncenter), mol.geometry.z(ishell.ncenter)])
+                    B = np.array([mol.geometry.x(jshell.ncenter), mol.geometry.y(jshell.ncenter), mol.geometry.z(jshell.ncenter)])
                     alpha = expa + expb
                     zeta = (expa * expb) / alpha
                     P = (expa * A + expb * B) / alpha

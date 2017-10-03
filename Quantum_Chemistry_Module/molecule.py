@@ -1,6 +1,6 @@
 # This file defines a molecule class that returns information about the molecule.
 import psi4
-
+psi4.core.be_quiet()
 
 class Molecule(object):
     """

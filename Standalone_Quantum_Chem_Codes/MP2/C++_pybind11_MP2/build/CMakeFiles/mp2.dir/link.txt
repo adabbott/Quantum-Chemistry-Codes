@@ -1,0 +1,1 @@
+/root/anaconda3/envs/sss/bin/c++  -fPIC  -fopenmp  -shared  -o mp2.cpython-35m-x86_64-linux-gnu.so CMakeFiles/mp2.dir/mp2.cpp.o 

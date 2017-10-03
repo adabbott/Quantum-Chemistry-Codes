@@ -1,0 +1,234 @@
+
+Host: Adam-PC
+
+Timers On : Fri Sep 15 15:06:31 2017
+Timers Off: Fri Sep 15 15:06:32 2017
+
+Wall Time:        1.00 seconds
+
+Total PK formation time:       0.02u       0.02s 0.02656800w      1 call
+HF: Form H  :       0.00u       0.00s 0.00519900w      1 call
+HF: Form S/X:       0.00u       0.00s 0.00109000w      1 call
+HF: Guess   :       0.09u       0.00s 0.08694400w      1 call
+SAD Guess   :       0.08u       0.00s 0.08424700w      1 call
+JK: (A|mn)  :       0.00u       0.00s   0.000334w      2 calls
+JK: (A|Q)^-1/2:       0.04u       0.00s   0.035844w      2 calls
+JK: (Q|mn)  :       0.00u       0.00s   0.000012w      2 calls
+JK: D       :       0.00u       0.00s   0.000083w     13 calls
+JK: USO2AO  :       0.00u       0.00s   0.000062w     13 calls
+JK: JK      :       0.00u       0.00s   0.001582w     13 calls
+JK: J       :       0.00u       0.00s   0.000479w      4 calls
+JK: J1      :       0.00u       0.00s   0.000431w      8 calls
+JK: J2      :       0.00u       0.00s   0.000016w      8 calls
+JK: K       :       0.00u       0.00s   0.000453w      4 calls
+JK: K1      :       0.00u       0.00s   0.000061w      6 calls
+JK: K2      :       0.00u       0.00s   0.000370w      6 calls
+JK: AO2USO  :       0.00u       0.00s   0.000016w     13 calls
+DIISManager::add_entry:       0.00u       0.00s   0.003021w     12 calls
+DIISManager::extrapolate:       0.00u       0.00s   0.001875w     11 calls
+DIISManager::extrapolate: bMatrix setup:       0.00u       0.00s   0.000966w     11 calls
+DIISManager::extrapolate: bMatrix pseudoinverse:       0.00u       0.00s   0.000212w     11 calls
+DIISManager::extrapolate: form new data:       0.00u       0.00s   0.000631w     11 calls
+HF: Form G  :       0.00u       0.00s   0.000835w      9 calls
+PK computes JK:       0.00u       0.00s   0.000570w      9 calls
+HF: Form F  :       0.00u       0.00s   0.000038w      9 calls
+HF: DIIS    :       0.00u       0.00s   0.004907w      9 calls
+HF: Form C  :       0.00u       0.00s   0.000292w      9 calls
+HF: Form D  :       0.00u       0.00s   0.000015w      9 calls
+
+***********************************************************
+
+Host: Adam-PC
+
+Timers On : Fri Sep 15 15:06:47 2017
+Timers Off: Fri Sep 15 15:06:48 2017
+
+Wall Time:        1.00 seconds
+
+Total PK formation time:       0.02u       0.00s 0.02151000w      1 call
+HF: Form H  :       0.00u       0.02s 0.00435700w      1 call
+HF: Form S/X:       0.00u       0.00s 0.00018500w      1 call
+HF: Guess   :       0.08u       0.00s 0.07444600w      1 call
+SAD Guess   :       0.08u       0.00s 0.07233300w      1 call
+JK: (A|mn)  :       0.00u       0.00s   0.000306w      2 calls
+JK: (A|Q)^-1/2:       0.02u       0.00s   0.027260w      2 calls
+JK: (Q|mn)  :       0.00u       0.00s   0.000011w      2 calls
+JK: D       :       0.00u       0.00s   0.000060w     13 calls
+JK: USO2AO  :       0.00u       0.00s   0.000048w     13 calls
+JK: JK      :       0.00u       0.00s   0.000270w     13 calls
+JK: J       :       0.00u       0.00s   0.000050w      4 calls
+JK: J1      :       0.00u       0.00s   0.000020w      8 calls
+JK: J2      :       0.00u       0.00s   0.000010w      8 calls
+JK: K       :       0.00u       0.00s   0.000069w      4 calls
+JK: K1      :       0.00u       0.00s   0.000034w      6 calls
+JK: K2      :       0.00u       0.00s   0.000019w      6 calls
+JK: AO2USO  :       0.00u       0.00s   0.000012w     13 calls
+DIISManager::add_entry:       0.00u       0.00s   0.003009w     12 calls
+DIISManager::extrapolate:       0.00u       0.00s   0.001794w     11 calls
+DIISManager::extrapolate: bMatrix setup:       0.00u       0.00s   0.000925w     11 calls
+DIISManager::extrapolate: bMatrix pseudoinverse:       0.00u       0.00s   0.000199w     11 calls
+DIISManager::extrapolate: form new data:       0.00u       0.00s   0.000606w     11 calls
+HF: Form G  :       0.00u       0.00s   0.000269w      9 calls
+PK computes JK:       0.00u       0.00s   0.000081w      9 calls
+HF: Form F  :       0.00u       0.00s   0.000026w      9 calls
+HF: DIIS    :       0.00u       0.00s   0.004805w      9 calls
+HF: Form C  :       0.00u       0.00s   0.000268w      9 calls
+HF: Form D  :       0.00u       0.00s   0.000016w      9 calls
+
+***********************************************************
+
+Host: Adam-PC
+
+Timers On : Fri Sep 15 15:07:14 2017
+Timers Off: Fri Sep 15 15:07:15 2017
+
+Wall Time:        1.00 seconds
+
+Total PK formation time:       0.01u       0.00s 0.02145700w      1 call
+HF: Form H  :       0.00u       0.01s 0.00454000w      1 call
+HF: Form S/X:       0.00u       0.00s 0.00017900w      1 call
+HF: Guess   :       0.08u       0.00s 0.07446500w      1 call
+SAD Guess   :       0.08u       0.00s 0.07235500w      1 call
+JK: (A|mn)  :       0.00u       0.00s   0.000304w      2 calls
+JK: (A|Q)^-1/2:       0.05u       0.00s   0.027303w      2 calls
+JK: (Q|mn)  :       0.00u       0.00s   0.000012w      2 calls
+JK: D       :       0.00u       0.00s   0.000056w     13 calls
+JK: USO2AO  :       0.00u       0.00s   0.000048w     13 calls
+JK: JK      :       0.00u       0.00s   0.000273w     13 calls
+JK: J       :       0.00u       0.00s   0.000049w      4 calls
+JK: J1      :       0.00u       0.00s   0.000019w      8 calls
+JK: J2      :       0.00u       0.00s   0.000011w      8 calls
+JK: K       :       0.00u       0.00s   0.000071w      4 calls
+JK: K1      :       0.00u       0.00s   0.000034w      6 calls
+JK: K2      :       0.00u       0.00s   0.000019w      6 calls
+JK: AO2USO  :       0.00u       0.00s   0.000013w     13 calls
+DIISManager::add_entry:       0.00u       0.00s   0.002818w     12 calls
+DIISManager::extrapolate:       0.00u       0.00s   0.001843w     11 calls
+DIISManager::extrapolate: bMatrix setup:       0.00u       0.00s   0.000927w     11 calls
+DIISManager::extrapolate: bMatrix pseudoinverse:       0.00u       0.00s   0.000228w     11 calls
+DIISManager::extrapolate: form new data:       0.00u       0.00s   0.000619w     11 calls
+HF: Form G  :       0.00u       0.00s   0.000272w      9 calls
+PK computes JK:       0.00u       0.00s   0.000082w      9 calls
+HF: Form F  :       0.00u       0.00s   0.000029w      9 calls
+HF: DIIS    :       0.00u       0.00s   0.004660w      9 calls
+HF: Form C  :       0.00u       0.00s   0.000273w      9 calls
+HF: Form D  :       0.00u       0.00s   0.000016w      9 calls
+
+***********************************************************
+
+Host: Adam-PC
+
+Timers On : Fri Sep 15 15:09:42 2017
+Timers Off: Fri Sep 15 15:09:43 2017
+
+Wall Time:        1.00 seconds
+
+Total PK formation time:       0.02u       0.00s 0.02143700w      1 call
+HF: Form H  :       0.00u       0.01s 0.00434000w      1 call
+HF: Form S/X:       0.00u       0.00s 0.00017600w      1 call
+HF: Guess   :       0.05u       0.02s 0.07554500w      1 call
+SAD Guess   :       0.05u       0.02s 0.07343900w      1 call
+JK: (A|mn)  :       0.00u       0.00s   0.000309w      2 calls
+JK: (A|Q)^-1/2:       0.03u       0.02s   0.027536w      2 calls
+JK: (Q|mn)  :       0.00u       0.00s   0.000011w      2 calls
+JK: D       :       0.00u       0.00s   0.000057w     13 calls
+JK: USO2AO  :       0.00u       0.00s   0.000051w     13 calls
+JK: JK      :       0.00u       0.00s   0.000278w     13 calls
+JK: J       :       0.00u       0.00s   0.000049w      4 calls
+JK: J1      :       0.00u       0.00s   0.000019w      8 calls
+JK: J2      :       0.00u       0.00s   0.000011w      8 calls
+JK: K       :       0.00u       0.00s   0.000070w      4 calls
+JK: K1      :       0.00u       0.00s   0.000035w      6 calls
+JK: K2      :       0.00u       0.00s   0.000017w      6 calls
+JK: AO2USO  :       0.00u       0.00s   0.000013w     13 calls
+DIISManager::add_entry:       0.00u       0.00s   0.002790w     12 calls
+DIISManager::extrapolate:       0.00u       0.00s   0.001803w     11 calls
+DIISManager::extrapolate: bMatrix setup:       0.00u       0.00s   0.000935w     11 calls
+DIISManager::extrapolate: bMatrix pseudoinverse:       0.00u       0.00s   0.000195w     11 calls
+DIISManager::extrapolate: form new data:       0.00u       0.00s   0.000612w     11 calls
+HF: Form G  :       0.00u       0.00s   0.000269w      9 calls
+PK computes JK:       0.00u       0.00s   0.000084w      9 calls
+HF: Form F  :       0.00u       0.00s   0.000026w      9 calls
+HF: DIIS    :       0.00u       0.00s   0.004596w      9 calls
+HF: Form C  :       0.00u       0.00s   0.000265w      9 calls
+HF: Form D  :       0.00u       0.00s   0.000018w      9 calls
+
+***********************************************************
+
+Host: Adam-PC
+
+Timers On : Fri Sep 15 15:10:07 2017
+Timers Off: Fri Sep 15 15:10:08 2017
+
+Wall Time:        1.00 seconds
+
+Total PK formation time:       0.03u       0.00s 0.02168200w      1 call
+HF: Form H  :       0.00u       0.00s 0.00425100w      1 call
+HF: Form S/X:       0.00u       0.00s 0.00024700w      1 call
+HF: Guess   :       0.08u       0.00s 0.07484200w      1 call
+SAD Guess   :       0.08u       0.00s 0.07267900w      1 call
+JK: (A|mn)  :       0.00u       0.00s   0.000314w      2 calls
+JK: (A|Q)^-1/2:       0.04u       0.00s   0.027548w      2 calls
+JK: (Q|mn)  :       0.00u       0.00s   0.000011w      2 calls
+JK: D       :       0.00u       0.00s   0.000062w     13 calls
+JK: USO2AO  :       0.00u       0.00s   0.000052w     13 calls
+JK: JK      :       0.00u       0.00s   0.000274w     13 calls
+JK: J       :       0.00u       0.00s   0.000050w      4 calls
+JK: J1      :       0.00u       0.00s   0.000019w      8 calls
+JK: J2      :       0.00u       0.00s   0.000010w      8 calls
+JK: K       :       0.00u       0.00s   0.000069w      4 calls
+JK: K1      :       0.00u       0.00s   0.000033w      6 calls
+JK: K2      :       0.00u       0.00s   0.000019w      6 calls
+JK: AO2USO  :       0.00u       0.00s   0.000012w     13 calls
+DIISManager::add_entry:       0.00u       0.00s   0.002929w     12 calls
+DIISManager::extrapolate:       0.00u       0.01s   0.001888w     11 calls
+DIISManager::extrapolate: bMatrix setup:       0.00u       0.00s   0.000925w     11 calls
+DIISManager::extrapolate: bMatrix pseudoinverse:       0.00u       0.00s   0.000201w     11 calls
+DIISManager::extrapolate: form new data:       0.00u       0.01s   0.000698w     11 calls
+HF: Form G  :       0.00u       0.00s   0.000278w      9 calls
+PK computes JK:       0.00u       0.00s   0.000085w      9 calls
+HF: Form F  :       0.00u       0.00s   0.000025w      9 calls
+HF: DIIS    :       0.00u       0.01s   0.004821w      9 calls
+HF: Form C  :       0.00u       0.00s   0.000272w      9 calls
+HF: Form D  :       0.00u       0.00s   0.000016w      9 calls
+
+***********************************************************
+
+Host: Adam-PC
+
+Timers On : Fri Sep 15 15:10:30 2017
+Timers Off: Fri Sep 15 15:10:31 2017
+
+Wall Time:        1.00 seconds
+
+Total PK formation time:       0.01u       0.00s 0.02177900w      1 call
+HF: Form H  :       0.00u       0.01s 0.00432800w      1 call
+HF: Form S/X:       0.00u       0.00s 0.00017600w      1 call
+HF: Guess   :       0.06u       0.00s 0.07440100w      1 call
+SAD Guess   :       0.06u       0.00s 0.07227900w      1 call
+JK: (A|mn)  :       0.00u       0.00s   0.000403w      2 calls
+JK: (A|Q)^-1/2:       0.02u       0.00s   0.027115w      2 calls
+JK: (Q|mn)  :       0.00u       0.00s   0.000011w      2 calls
+JK: D       :       0.00u       0.00s   0.000057w     13 calls
+JK: USO2AO  :       0.00u       0.00s   0.000048w     13 calls
+JK: JK      :       0.00u       0.00s   0.000272w     13 calls
+JK: J       :       0.00u       0.00s   0.000050w      4 calls
+JK: J1      :       0.00u       0.00s   0.000020w      8 calls
+JK: J2      :       0.00u       0.00s   0.000012w      8 calls
+JK: K       :       0.00u       0.00s   0.000070w      4 calls
+JK: K1      :       0.00u       0.00s   0.000033w      6 calls
+JK: K2      :       0.00u       0.00s   0.000019w      6 calls
+JK: AO2USO  :       0.00u       0.00s   0.000011w     13 calls
+DIISManager::add_entry:       0.00u       0.02s   0.003022w     12 calls
+DIISManager::extrapolate:       0.00u       0.00s   0.001814w     11 calls
+DIISManager::extrapolate: bMatrix setup:       0.00u       0.00s   0.000940w     11 calls
+DIISManager::extrapolate: bMatrix pseudoinverse:       0.00u       0.00s   0.000203w     11 calls
+DIISManager::extrapolate: form new data:       0.00u       0.00s   0.000608w     11 calls
+HF: Form G  :       0.00u       0.00s   0.000278w      9 calls
+PK computes JK:       0.00u       0.00s   0.000084w      9 calls
+HF: Form F  :       0.00u       0.00s   0.000025w      9 calls
+HF: DIIS    :       0.00u       0.02s   0.004839w      9 calls
+HF: Form C  :       0.00u       0.00s   0.000270w      9 calls
+HF: Form D  :       0.00u       0.00s   0.000018w      9 calls
+
+***********************************************************

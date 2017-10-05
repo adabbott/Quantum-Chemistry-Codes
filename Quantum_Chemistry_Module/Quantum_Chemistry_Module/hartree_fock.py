@@ -9,7 +9,11 @@ def UHF(mol, maxiter = 50):
     # Get integral arrays
     S, T, V, I = integrals.compute_integrals(mol)
     # Form orthogonalizer
-    A = np.power(S, -0.5)   
+    mints = psi4.core.MintsHelper(mol.basis)
+    A = mints.ao_overlap()
+    A.power(-0.5, 1.e-16)  #diagonalize S matrix and take to negative one half power 
+    A = A.to_array()
+    #A = np.power(S, -0.5)   
     # Form one electron hamiltonian
     H = T + V      
     #Construct initial density matrices
@@ -36,14 +40,14 @@ def UHF(mol, maxiter = 50):
         Fa = H + Ja - Ka + Jb
         Fb = H + Jb - Kb + Ja
         # Calculate SCF energy
-        E_SCF = (1/2)*(np.einsum('pq,pq->', Fa+H, Da) + np.einsum('pq,pq->', Fb+H, Db))  + molecule.nuclear_repulsion_energy()
+        E_SCF = (1/2)*(np.einsum('pq,pq->', Fa+H, Da) + np.einsum('pq,pq->', Fb+H, Db))  + mol.nuclear_repulsion_energy
         print('UHF iteration %3d: energy %20.14f  dE %1.5E' % (iteration, E_SCF, (E_SCF - Eold)))
         
         if (abs(E_SCF - Eold) < 1.e-10):
             break
             
         Eold = E_SCF
-        Dolda = Da
+        Dolda = Da 
         Doldb = Db
         
         # Transform the Fock matrix
@@ -62,4 +66,4 @@ def UHF(mol, maxiter = 50):
         Cb = Cb[:, :nbeta]
         Da = np.einsum('pi,qi->pq', Ca, Ca)
         Db = np.einsum('pi,qi->pq', Cb, Cb)
-    return Ca, Cb, ea, eb
+    return E_SCF, Ca, Cb, ea, eb

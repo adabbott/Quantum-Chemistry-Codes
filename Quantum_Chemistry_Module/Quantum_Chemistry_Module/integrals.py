@@ -3,6 +3,17 @@ import numpy as np
 import molecule
 
 def obara_saika_recursion(PA, PB, alpha, AMa, AMb):
+    """
+    Performs Obara-Saika recursion routine to fill in all integral cartesian components recursively
+    Used to construct overlap, kinetic, and dipole integral x, y, z component arrays
+    Parameters
+    ----------
+    PA: wighted coordinate vector on atom A
+    PB: weighted coordinate vector on atom B
+    alpha: orbital exponent
+    AMa: angular momentum of A
+    AMb: angular momentum of B 
+    """
     if len(PA) != 3 or len(PB) != 3:
         raise "PA and PB must be xyz coordinates."
    

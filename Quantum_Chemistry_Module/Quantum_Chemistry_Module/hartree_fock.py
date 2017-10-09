@@ -55,15 +55,15 @@ def UHF(mol, maxiter = 50):
         Ftb = A.dot(Fb).dot(A)
         
         # Diagonalize the Fock matrix 
-        ea, Ca = np.linalg.eigh(Fta)
-        eb, Cb = np.linalg.eigh(Ftb)
+        ea, C_a = np.linalg.eigh(Fta)
+        eb, C_b = np.linalg.eigh(Ftb)
         
         # Construct new SCF eigenvector matrix for this iteration
-        Ca = A.dot(Ca)
-        Cb = A.dot(Cb)
+        C_a = A.dot(C_a)
+        C_b = A.dot(C_b)
         # Form the new density matrix for this iteration
-        Ca = Ca[:, :nalpha]
-        Cb = Cb[:, :nbeta]
+        Ca = C_a[:, :nalpha]
+        Cb = C_b[:, :nbeta]
         Da = np.einsum('pi,qi->pq', Ca, Ca)
         Db = np.einsum('pi,qi->pq', Cb, Cb)
-    return E_SCF, Ca, Cb, ea, eb
+    return E_SCF, C_a, C_b, ea, eb

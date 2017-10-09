@@ -121,7 +121,7 @@ class Molecule(object):
         for atom_index in range(self.geometry.natom()):
             protons += self.geometry.charge(atom_index)
 
-        self.number_of_electrons = -self.charge + protons
+        self.number_of_electrons = int(-self.charge + protons)
         self.ndocc = int(np.round(self.number_of_electrons * 0.5) - self.mult + 1) # Number of doubly occupied orbitals
         if self.ndocc < 0: # cover cases with more unpaired electrons than paired
             self.ndocc = 0

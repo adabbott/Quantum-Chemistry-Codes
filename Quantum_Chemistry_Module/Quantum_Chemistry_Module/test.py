@@ -4,6 +4,7 @@ import molecule
 import integrals
 import hartree_fock
 import spin_orbital_setup
+import mp2
 
 geom = psi4.geometry("""
 O
@@ -16,6 +17,7 @@ my_mol = molecule.Molecule(0, 1, geom, "sto-3g")
 SCF_e, Ca, Cb, ea, eb = hartree_fock.UHF(my_mol)
 S, T, V, I = integrals.compute_integrals(my_mol)
 I_phys, C, eps = spin_orbital_setup.spin_orbital(Ca, Cb, ea, eb, I)
+e_mp2 = mp2.mp2(my_mol)
 
 
 print("The charge of the molecule is")
